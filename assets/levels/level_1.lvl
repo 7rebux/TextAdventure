@@ -1,0 +1,10 @@
+# attributes
+§levelName=The Beginning
+
+# text box
+[TEXTBOX]This is a\nmultiline\ntextbox[TEXTBOX]
+
+# answers
+[BUTTON]Antwort 1:level_2[BUTTON]
+[BUTTON]Antwort 2:level_3[BUTTON]
+[BUTTON]Antwort 3:level_4[BUTTON]
