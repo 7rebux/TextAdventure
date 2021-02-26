@@ -2,6 +2,7 @@ package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
 import de.nosswald.game.item.impl.ItemHealthPotion;
+import de.nosswald.game.item.impl.ItemManaPotion;
 import de.nosswald.gui.element.impl.*;
 import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.utils.DrawUtils;
@@ -45,6 +46,7 @@ public class GuiSettings extends GuiScreen
         this.registerElement(new ElementComboBox("Title", 20, 150, 200, 60));
         this.registerElement(new ElementLabel("Example Label", 20, 120));
         this.registerElement(new ElementItem(new ItemHealthPotion(), 20, 220, 30));
+        this.registerElement(new ElementItem(new ItemManaPotion(), 60, 220, 30));
     }
 
     /**
