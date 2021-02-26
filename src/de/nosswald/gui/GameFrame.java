@@ -28,7 +28,6 @@ public class GameFrame extends JFrame
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setTitle("Loading..");
-        setBackground(Color.BLACK);
     }
 
     /**

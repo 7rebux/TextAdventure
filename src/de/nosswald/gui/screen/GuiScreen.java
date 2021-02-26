@@ -69,6 +69,11 @@ public abstract class GuiScreen extends JPanel
     @Override
     public void paint(Graphics g)
     {
+        super.paint(g);
+
+        // default background
+        this.setBackground(Color.BLACK);
+
         elements.forEach(e -> e.drawScreen(g));
         drawScreen(g);
 

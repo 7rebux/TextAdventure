@@ -2,8 +2,11 @@ package de.nosswald.gui.element.impl;
 
 import de.nosswald.game.item.Item;
 import de.nosswald.gui.element.Element;
+import de.nosswald.utils.DrawUtils;
 
 import java.awt.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * @author Nils Osswald
@@ -12,19 +15,19 @@ import java.awt.*;
 public class ElementItem extends Element
 {
     private Item item;
+    private Image icon;
 
     /**
      * @param item   the item
      * @param x      element position x
      * @param y      element position y
-     * @param width  element width measured in pixels
-     * @param height element height measured in pixels
      */
     public ElementItem(Item item, int x, int y, int size)
     {
         super(x, y, size, size);
 
         this.item = item;
+        this.icon = Toolkit.getDefaultToolkit().getImage(item.getItemData().iconPath());
     }
 
     /**
@@ -44,14 +47,45 @@ public class ElementItem extends Element
         g.setColor(Color.GRAY);
         g.drawRect(x, y, width, height);
 
-        // TODO draw item icon
+        // draw item icon
+        g.drawImage(icon, x, y, width, height, null);
 
         // draw item preview
         if (!isHovered())
             return;
 
+        int y = mouseY + 10;
+        int x = mouseX + 10;
+        String name = item.getItemData().name();
+
+        // draw border
+        g.setColor(Color.WHITE);
+        g.drawRect(x - 2, y - 2, getPreviewWidth(g) + 4, getPreviewHeight(g) + 4);
+
+        // draw item name
+        y += DrawUtils.getStringHeight(name, g);
         g.setColor(Color.decode(String.valueOf(item.getItemData().color())));
-        g.drawString(item.getItemData().name(), mouseX + 4, mouseY);
+        g.drawString(name, x, y);
+
+        // draw item description
+        g.setColor(Color.WHITE);
+        y += DrawUtils.getStringHeight(item.getItemData().description()[0], g);
+        for (String line : item.getItemData().description()) {
+            g.drawString(line, x, y);
+            y += DrawUtils.getStringHeight(line, g);
+        }
+    }
+
+    private int getPreviewWidth(Graphics g)
+    {
+        return DrawUtils.getStringWidth(
+                Arrays.stream(item.getItemData().description()).max(Comparator.comparingInt(String::length)).get(), g);
+    }
+
+    private int getPreviewHeight(Graphics g)
+    {
+        return DrawUtils.getStringHeight(item.getItemData().name(), g) +
+                Arrays.stream(item.getItemData().description()).mapToInt(s -> DrawUtils.getStringHeight(s, g)).sum();
     }
 
     /**
@@ -66,8 +100,6 @@ public class ElementItem extends Element
      * called on mouse input
      *
      * @param mouseButton the mouse button
-     * @param mouseX      the x mouse position
-     * @param mouseY      the y mouse position
      */
     @Override
     public void mouseClicked(int mouseButton)
