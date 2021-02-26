@@ -27,7 +27,8 @@ public abstract class Item
     public @interface ItemData
     {
         String name();
-        int color(); // needs to be int to support annotation interfaces
+        String iconPath();
+        int color(); // needs to be int (hex) to support annotations
         String[] description();
     }
 

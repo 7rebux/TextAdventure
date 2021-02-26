@@ -7,7 +7,11 @@ import de.nosswald.game.item.Item;
  * @author Nils Osswald
  * @version 1.0
  */
-@Item.ItemData(name = "Health Potion", color = 0xff0000, description = { "Restores 10 Health" })
+@Item.ItemData(
+        name = "Health Potion",
+        iconPath = "assets/items/health_potion.png",
+        color = 0xff0000,
+        description = { "Restores 10 Health" })
 public class ItemHealthPotion extends Item
 {
     /**
@@ -21,6 +25,8 @@ public class ItemHealthPotion extends Item
 
         if (health >= 100)
             return false;
+        else if (health > 90)
+            TextAdventure.getInstance().getPlayer().setHealth(100);
         else
             TextAdventure.getInstance().getPlayer().setHealth(health + 10);
 

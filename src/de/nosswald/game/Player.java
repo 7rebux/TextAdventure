@@ -2,6 +2,7 @@ package de.nosswald.game;
 
 /**
  * @author Nils Osswald
+ * @version 1.0
  */
 public class Player
 {
@@ -30,5 +31,10 @@ public class Player
     public int getMana()
     {
         return mana;
+    }
+
+    public void setMana(int mana)
+    {
+        this.mana = mana;
     }
 }
