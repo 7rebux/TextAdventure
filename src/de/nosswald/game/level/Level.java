@@ -1,7 +1,6 @@
 package de.nosswald.game.level;
 
 import de.nosswald.game.TextAdventure;
-import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.gui.screen.impl.GuiIngame;
 import de.nosswald.utils.DrawUtils;
 
@@ -47,7 +46,7 @@ public class Level
                 if (line.startsWith("#"))
                     continue;
 
-                // check if line is attribute
+                // check if line is an attribute
                 if (line.startsWith("§"))
                 {
                     for (Field field : getClass().getFields())
@@ -93,6 +92,7 @@ public class Level
      */
     public void drawScreen(Graphics g)
     {
+        // draw level name
         g.setColor(Color.WHITE);
         g.drawString(name, 4, DrawUtils.getScreenHeight() - 4);
     }
