@@ -1,5 +1,6 @@
 package de.nosswald.gui.element.impl;
 
+import de.nosswald.game.TextAdventure;
 import de.nosswald.game.item.Item;
 import de.nosswald.gui.element.Element;
 import de.nosswald.utils.DrawUtils;
@@ -104,11 +105,17 @@ public class ElementItem extends Element
     @Override
     public void mouseClicked(int mouseButton)
     {
-        boolean used;
-
+        // remove item from player inventory if used successfully
         if (this.isHovered())
-            used = item.useItem();
+            if (item.useItem() && TextAdventure.getInstance().getPlayer().getInventory().contains(item))
+                TextAdventure.getInstance().getPlayer().getInventory().remove(item);
+    }
 
-        // TODO destroy item if used successfully
+    /**
+     * @return the item that is being displayed
+     */
+    public Item getItem()
+    {
+        return item;
     }
 }
