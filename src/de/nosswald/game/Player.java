@@ -1,5 +1,9 @@
 package de.nosswald.game;
 
+import de.nosswald.game.item.Item;
+
+import java.util.ArrayList;
+
 /**
  * @author Nils Osswald
  * @version 1.0
@@ -8,9 +12,7 @@ public class Player
 {
     private int health;
     private int mana;
-
-    // TODO replace with Item class (health pot..)
-    private String[] inventory;
+    private final ArrayList<Item> inventory = new ArrayList<>();
 
     public Player()
     {
@@ -24,7 +26,8 @@ public class Player
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(int health)
+    {
         this.health = health;
     }
 
@@ -36,5 +39,10 @@ public class Player
     public void setMana(int mana)
     {
         this.mana = mana;
+    }
+
+    public ArrayList<Item> getInventory()
+    {
+        return inventory;
     }
 }
