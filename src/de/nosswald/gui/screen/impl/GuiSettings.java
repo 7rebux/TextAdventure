@@ -43,7 +43,7 @@ public class GuiSettings extends GuiScreen
 
         // testing
         this.registerElement(new ElementTextBox(new String[]{ "line1", "line2", "line3" }, 20, 20, 300, 60));
-        this.registerElement(new ElementComboBox("Title", 20, 150, 200, 60));
+        this.registerElement(new ElementInventory("Title", 20, 150, 200, 60));
         this.registerElement(new ElementLabel("Example Label", 20, 120));
         this.registerElement(new ElementItem(new ItemHealthPotion(), 20, 220, 30));
         this.registerElement(new ElementItem(new ItemManaPotion(), 60, 220, 30));
