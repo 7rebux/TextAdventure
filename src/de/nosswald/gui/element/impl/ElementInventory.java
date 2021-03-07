@@ -1,17 +1,20 @@
 package de.nosswald.gui.element.impl;
 
+import de.nosswald.game.item.Item;
 import de.nosswald.gui.element.Element;
 import de.nosswald.utils.DrawUtils;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * @author Nils Osswald
  * @version 1.0
  */
-public class ElementComboBox extends Element
+public class ElementInventory extends Element
 {
     private String title;
+    private final ArrayList<Item> items = new ArrayList<>();
 
     /**
      * @param title  combo box title
@@ -20,7 +23,7 @@ public class ElementComboBox extends Element
      * @param width  element width measured in pixels
      * @param height element height measured in pixels
      */
-    public ElementComboBox(String title, int x, int y, int width, int height)
+    public ElementInventory(String title, int x, int y, int width, int height)
     {
         super(x, y, width, height);
 
