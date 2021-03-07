@@ -2,7 +2,7 @@ package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
 import de.nosswald.game.level.Level;
-import de.nosswald.gui.element.impl.ElementComboBox;
+import de.nosswald.gui.element.impl.ElementInventory;
 import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.utils.DrawUtils;
 
@@ -41,7 +41,7 @@ public class GuiIngame extends GuiScreen
     public void init()
     {
         // add inventory
-        registerElement(new ElementComboBox("Inventory", 10, 70, 200, 120));
+        registerElement(new ElementInventory("Inventory", 10, 70, 200, 120));
 
         // create new game score
         TextAdventure.getInstance().createScore();
