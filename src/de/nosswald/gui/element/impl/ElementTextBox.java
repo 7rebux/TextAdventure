@@ -47,6 +47,9 @@ public class ElementTextBox extends Element
         g.drawRect(x, y, width, height);
 
         // draw lines
+        if (lines == null)
+            return;
+
         int y = this.y + DrawUtils.getStringHeight(lines[0], g);
         for (String line : lines)
         {

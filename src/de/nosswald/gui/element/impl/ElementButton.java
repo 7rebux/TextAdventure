@@ -50,8 +50,12 @@ public class ElementButton extends Element
     @Override
     public void drawScreen(Graphics g)
     {
+        // draw border
         g.setColor(Color.CYAN);
         g.drawRect(x, y, width, height);
+
+
+        // draw text
         g.drawString(title,
                 x + ((width - DrawUtils.getStringWidth(title, g)) / 2),
                 y + ((height + DrawUtils.getStringHeight(title, g)) / 2));
