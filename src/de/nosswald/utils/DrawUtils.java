@@ -16,7 +16,7 @@ public class DrawUtils
      */
     public static int getScreenWidth()
     {
-        return TextAdventure.getInstance().getGameFrame().getWidth();
+        return TextAdventure.getInstance().getGameFrame().getWidth() - 18;
     }
 
     /**
