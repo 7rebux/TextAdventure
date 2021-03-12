@@ -25,10 +25,8 @@ public class ItemHealthPotion extends Item
 
         if (health >= 100)
             return false;
-        else if (health > 90)
-            TextAdventure.getInstance().getPlayer().setHealth(100);
-        else
-            TextAdventure.getInstance().getPlayer().setHealth(health + 10);
+
+        TextAdventure.getInstance().getPlayer().setHealth(health > 90 ? 100 : health + 10);
 
         return true;
     }

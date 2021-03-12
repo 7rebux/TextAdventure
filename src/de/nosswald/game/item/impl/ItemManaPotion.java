@@ -26,10 +26,8 @@ public class ItemManaPotion extends Item
 
         if (mana >= 100)
             return false;
-        else if (mana > 90)
-            TextAdventure.getInstance().getPlayer().setMana(100);
-        else
-            TextAdventure.getInstance().getPlayer().setMana(mana + 10);
+
+        TextAdventure.getInstance().getPlayer().setMana(mana >= 90 ? 100 : mana + 10);
 
         return true;
     }
