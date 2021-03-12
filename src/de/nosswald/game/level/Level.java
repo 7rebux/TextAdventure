@@ -3,6 +3,7 @@ package de.nosswald.game.level;
 import de.nosswald.game.TextAdventure;
 import de.nosswald.gui.screen.impl.GuiIngame;
 import de.nosswald.utils.DrawUtils;
+import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.io.FileNotFoundException;
@@ -12,6 +13,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -20,12 +23,18 @@ import java.util.Scanner;
  */
 public class Level
 {
+    private String[] dialogText;
+    private final HashMap<String, String> answers = new HashMap<>();
+
     /*
      * The visibility of this fields has to be public
      * for reflection to work properly.
      */
     @Attribute(name = "levelName")
     public String name;
+
+    @Attribute(name = "characterName")
+    public String characterName;
 
     /**
      * creates a level object by its file path
@@ -65,6 +74,15 @@ public class Level
                         }
                     }
                 }
+                // check if line is the dialog
+                else if (line.startsWith("[DIALOG]"))
+                    dialogText = line.replace("[DIALOG]", "").split("//");
+                // check if line is an answer
+                else if (line.startsWith("[ANSWER]"))
+                {
+                    String[] answer = line.replace("[ANSWER]", "").split(":");
+                    answers.put(answer[0], answer[1]);
+                }
             }
         }
         catch (FileNotFoundException | IllegalAccessException ignored) { }
@@ -74,14 +92,19 @@ public class Level
 
     /**
      * loads the level into the ingame gui
+     * @param screen the screen object
      */
-    public void load()
+    public void load(@NotNull GuiIngame screen)
     {
-        // load level into ingame gui
-        if (TextAdventure.getInstance().getGameFrame().getCurrentScreen() instanceof GuiIngame)
+        screen.getDialogBox().setLines(dialogText);
+
+        int i = 0;
+        for (Map.Entry<String, String> entry : answers.entrySet())
         {
-            GuiIngame screen = (GuiIngame)TextAdventure.getInstance().getGameFrame().getCurrentScreen();
-            screen.setLevel(this);
+            screen.getAnswerButton()[i].setTitle(entry.getKey());
+            screen.getAnswerButton()[i].setClickAction(() ->
+                    screen.setLevel(TextAdventure.getInstance().getLevelManager().getLevel(entry.getValue())));
+            ++i;
         }
     }
 

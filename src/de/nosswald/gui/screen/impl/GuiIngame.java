@@ -7,6 +7,7 @@ import de.nosswald.gui.element.impl.ElementInventory;
 import de.nosswald.gui.element.impl.ElementTextBox;
 import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.utils.DrawUtils;
+import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -31,7 +32,7 @@ public class GuiIngame extends GuiScreen
 
         // draw help
         g.setColor(Color.WHITE);
-        g.drawString(help, DrawUtils.getScreenWidth() - DrawUtils.getStringWidth(help, g) - 18,
+        g.drawString(help, DrawUtils.getScreenWidth() - DrawUtils.getStringWidth(help, g),
                 DrawUtils.getScreenHeight() - 4);
 
         // draw status bars
@@ -51,22 +52,21 @@ public class GuiIngame extends GuiScreen
         inventory = new ElementInventory("Inventory", 10, 70, 200, 120);
         this.registerElement(inventory);
 
-        // add dialog box and answer buttons - TODO DrawUtils#getScreenWith() not returning expected value
-        dialogBox = new ElementTextBox(null, 0, 340, DrawUtils.getScreenWidth() - 18, 200);
+        // add dialog box and answer buttons
+        dialogBox = new ElementTextBox(null, 0, 340, DrawUtils.getScreenWidth(), 200);
         this.registerElement(dialogBox);
 
         answerButton = new ElementButton[3];
-        answerButton[0] = new ElementButton("", 200 - 18, 295, 200, 40);
-        answerButton[1] = new ElementButton("", 400 - 18, 295, 200, 40);
-        answerButton[2] = new ElementButton("", 600 - 18, 295, 200, 40);
+        answerButton[0] = new ElementButton("", 0, 299, 200, 40);
+        answerButton[1] = new ElementButton("", 200, 299, 200, 40);
+        answerButton[2] = new ElementButton("", 400, 299, 200, 40);
         Arrays.stream(answerButton).forEach(a -> this.registerElement(a));
 
         // create new game score
         TextAdventure.getInstance().createScore();
 
         // load first level
-        level = TextAdventure.getInstance().getLevelManager().getLevel("The Beginning");
-        level.load();
+        setLevel(TextAdventure.getInstance().getLevelManager().getLevel("The Beginning"));
     }
 
     /**
@@ -112,11 +112,32 @@ public class GuiIngame extends GuiScreen
     public void mouseClicked(int mouseButton) { }
 
     /**
-     * allows you to change the current level
-     * @param level the level
+     * @return the inventory element
      */
-    public void setLevel(Level level)
+    public ElementInventory getInventory()
+    {
+        return inventory;
+    }
+
+    /**
+     * @return the dialog box element
+     */
+    public ElementTextBox getDialogBox()
+    {
+        return dialogBox;
+    }
+
+    /**
+     * @return the different answer button elements
+     */
+    public ElementButton[] getAnswerButton()
+    {
+        return answerButton;
+    }
+
+    public void setLevel(@NotNull Level level)
     {
         this.level = level;
+        level.load(this);
     }
 }

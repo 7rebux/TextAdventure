@@ -81,4 +81,12 @@ public class ElementButton extends Element
         if (this.isHovered())
             action.performAction();
     }
+
+    /**
+     * @param title the button title
+     */
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
 }

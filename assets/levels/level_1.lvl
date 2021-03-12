@@ -1,2 +1,11 @@
-# attributes
+# attributes (format: §(attribute name)=(value))
 §levelName=The Beginning
+§characterName=Character
+
+# dialog (format: [DIALOG](dialog text))
+[DIALOG]This text is being displayed in the dialog box.//This is a new line.
+
+# answers buttons (format: [ANSWER](answer text):(level name)
+[ANSWER]Answer 1:Not implemented
+[ANSWER]Answer 2:Not implemented
+[ANSWER]Answer 3:Not implemented

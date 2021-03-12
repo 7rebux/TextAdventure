@@ -73,4 +73,12 @@ public class ElementTextBox extends Element
      */
     @Override
     public void mouseClicked(int mouseButton) { }
+
+    /**
+     * @param lines the text content separated in lines
+     */
+    public void setLines(String[] lines)
+    {
+        this.lines = lines;
+    }
 }
