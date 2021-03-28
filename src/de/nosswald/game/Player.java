@@ -12,7 +12,7 @@ public class Player
 {
     private int health;
     private int mana;
-    private final ArrayList<Item> inventory = new ArrayList<>();
+    private final Item[] inventory = new Item[6];
 
     public Player()
     {
@@ -41,7 +41,7 @@ public class Player
         this.mana = mana;
     }
 
-    public ArrayList<Item> getInventory()
+    public Item[] getInventory()
     {
         return inventory;
     }

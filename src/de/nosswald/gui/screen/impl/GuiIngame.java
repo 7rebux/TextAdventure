@@ -1,9 +1,11 @@
 package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
+import de.nosswald.game.item.impl.ItemHealthPotion;
 import de.nosswald.game.level.Level;
 import de.nosswald.gui.element.impl.ElementButton;
-import de.nosswald.gui.element.impl.ElementInventory;
+import de.nosswald.gui.element.impl.ElementComboBox;
+import de.nosswald.gui.element.impl.ElementItem;
 import de.nosswald.gui.element.impl.ElementTextBox;
 import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.utils.DrawUtils;
@@ -20,7 +22,6 @@ import java.util.Arrays;
 @GuiScreen.ScreenData(title = "Loading..")
 public class GuiIngame extends GuiScreen
 {
-    private ElementInventory inventory;
     private ElementTextBox dialogBox;
     private ElementButton[] answerButton;
 
@@ -48,9 +49,19 @@ public class GuiIngame extends GuiScreen
     @Override
     public void init()
     {
-        // add inventory
-        inventory = new ElementInventory("Inventory", 10, 70, 200, 120);
-        this.registerElement(inventory);
+        // create new game score
+        TextAdventure.getInstance().createScore();
+
+        TextAdventure.getInstance().getPlayer().getInventory()[0] = new ItemHealthPotion();
+
+        // add inventory frame
+        this.registerElement(new ElementComboBox(10, 70, 200, 120));
+
+        // add inventory slots
+        ElementItem[] inventorySlot = new ElementItem[6];
+        for (int i = 0; i < inventorySlot.length; i++)
+            inventorySlot[i] = new ElementItem(TextAdventure.getInstance().getPlayer().getInventory()[i], i, 15 + i * 45, 75, 40);
+        Arrays.stream(inventorySlot).forEach(this::registerElement);
 
         // add dialog box and answer buttons
         dialogBox = new ElementTextBox(null, 0, 340, DrawUtils.getScreenWidth(), 200);
@@ -60,10 +71,7 @@ public class GuiIngame extends GuiScreen
         answerButton[0] = new ElementButton("", 0, 299, 200, 40);
         answerButton[1] = new ElementButton("", 200, 299, 200, 40);
         answerButton[2] = new ElementButton("", 400, 299, 200, 40);
-        Arrays.stream(answerButton).forEach(a -> this.registerElement(a));
-
-        // create new game score
-        TextAdventure.getInstance().createScore();
+        Arrays.stream(answerButton).forEach(this::registerElement);
 
         // load first level
         setLevel(TextAdventure.getInstance().getLevelManager().getLevel("The Beginning"));
@@ -110,14 +118,6 @@ public class GuiIngame extends GuiScreen
      */
     @Override
     public void mouseClicked(int mouseButton) { }
-
-    /**
-     * @return the inventory element
-     */
-    public ElementInventory getInventory()
-    {
-        return inventory;
-    }
 
     /**
      * @return the dialog box element

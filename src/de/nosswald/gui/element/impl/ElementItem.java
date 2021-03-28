@@ -15,20 +15,23 @@ import java.util.Comparator;
  */
 public class ElementItem extends Element
 {
-    private Item item;
-    private Image icon;
+    private final Item item;
+
+    private int index;
 
     /**
      * @param item   the item
+     * @param index  the index of the inventory array
      * @param x      element position x
      * @param y      element position y
+     * @param size   element width and height
      */
-    public ElementItem(Item item, int x, int y, int size)
+    public ElementItem(Item item, int index, int x, int y, int size)
     {
         super(x, y, size, size);
 
+        this.index = index;
         this.item = item;
-        this.icon = Toolkit.getDefaultToolkit().getImage(item.getItemData().iconPath());
     }
 
     /**
@@ -48,8 +51,11 @@ public class ElementItem extends Element
         g.setColor(Color.GRAY);
         g.drawRect(x, y, width, height);
 
+        if (item == null)
+            return;
+
         // draw item icon
-        g.drawImage(icon, x, y, width, height, null);
+        g.drawImage(Toolkit.getDefaultToolkit().getImage(item.getItemData().iconPath()), x, y, width, height, null);
 
         // draw item preview
         if (!isHovered())
@@ -106,9 +112,8 @@ public class ElementItem extends Element
     public void mouseClicked(int mouseButton)
     {
         // remove item from player inventory if used successfully
-        if (this.isHovered())
-            if (item.useItem() && TextAdventure.getInstance().getPlayer().getInventory().contains(item))
-                TextAdventure.getInstance().getPlayer().getInventory().remove(item);
+        if (this.isHovered() && item.useItem())
+            TextAdventure.getInstance().getPlayer().getInventory()[index] = null;
     }
 
     /**
