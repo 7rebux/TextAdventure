@@ -1,33 +1,25 @@
 package de.nosswald.gui.element.impl;
 
-import de.nosswald.game.item.Item;
 import de.nosswald.gui.element.Element;
 import de.nosswald.utils.DrawUtils;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 /**
  * @author Nils Osswald
  * @version 1.0
  */
-public class ElementInventory extends Element
+public class ElementComboBox extends Element
 {
-    private String title;
-    private final ArrayList<Item> items = new ArrayList<>();
-
     /**
-     * @param title  combo box title
      * @param x      element position x
      * @param y      element position y
      * @param width  element width measured in pixels
      * @param height element height measured in pixels
      */
-    public ElementInventory(String title, int x, int y, int width, int height)
+    public ElementComboBox(int x, int y, int width, int height)
     {
         super(x, y, width, height);
-
-        this.title = title;
     }
 
     /**
@@ -45,6 +37,7 @@ public class ElementInventory extends Element
     public void drawScreen(Graphics g)
     {
         int gap = width / 10;
+        String title = "Inventory";
 
         g.setColor(Color.WHITE);
 
