@@ -98,13 +98,13 @@ public class Level
     {
         screen.getDialogBox().setLines(dialogText);
 
-        int i = 0;
+        int i = answers.size() - 1;
         for (Map.Entry<String, String> entry : answers.entrySet())
         {
             screen.getAnswerButton()[i].setTitle(entry.getKey());
             screen.getAnswerButton()[i].setClickAction(() ->
                     screen.setLevel(TextAdventure.getInstance().getLevelManager().getLevel(entry.getValue())));
-            ++i;
+            --i;
         }
     }
 
