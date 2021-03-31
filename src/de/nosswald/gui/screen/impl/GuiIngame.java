@@ -55,22 +55,20 @@ public class GuiIngame extends GuiScreen
         TextAdventure.getInstance().getPlayer().getInventory()[0] = new ItemHealthPotion();
 
         // add inventory frame
-        this.registerElement(new ElementComboBox(10, 70, 200, 120));
+        this.registerElement(new ElementComboBox(10, 70, 200, 130));
 
         // add inventory slots
         ElementItem[] inventorySlot = new ElementItem[6];
-        for (int i = 0; i < inventorySlot.length; i++)
-            inventorySlot[i] = new ElementItem(TextAdventure.getInstance().getPlayer().getInventory()[i], i, 15 + i * 45, 75, 40);
+        Arrays.setAll(inventorySlot, i -> new ElementItem(i, 20 + i % 3 * 65, i > 2 ? 140 : 80, 50));
         Arrays.stream(inventorySlot).forEach(this::registerElement);
 
-        // add dialog box and answer buttons
+        // add dialog box
         dialogBox = new ElementTextBox(null, 0, 340, DrawUtils.getScreenWidth(), 200);
         this.registerElement(dialogBox);
 
+        // add answer buttons
         answerButton = new ElementButton[3];
-        answerButton[0] = new ElementButton("", 0, 299, 200, 40);
-        answerButton[1] = new ElementButton("", 200, 299, 200, 40);
-        answerButton[2] = new ElementButton("", 400, 299, 200, 40);
+        Arrays.setAll(answerButton, i -> new ElementButton("", i * 200, 299, 200, 40));
         Arrays.stream(answerButton).forEach(this::registerElement);
 
         // load first level

@@ -15,23 +15,20 @@ import java.util.Comparator;
  */
 public class ElementItem extends Element
 {
-    private final Item item;
-
-    private int index;
+    private Item item;
+    private final int index;
 
     /**
-     * @param item   the item
-     * @param index  the index of the inventory array
+     * @param index  the index of the item in the players inventory
      * @param x      element position x
      * @param y      element position y
      * @param size   element width and height
      */
-    public ElementItem(Item item, int index, int x, int y, int size)
+    public ElementItem(int index, int x, int y, int size)
     {
         super(x, y, size, size);
 
         this.index = index;
-        this.item = item;
     }
 
     /**
@@ -50,6 +47,8 @@ public class ElementItem extends Element
     {
         g.setColor(Color.GRAY);
         g.drawRect(x, y, width, height);
+
+        this.item = TextAdventure.getInstance().getPlayer().getInventory()[index];
 
         if (item == null)
             return;
@@ -111,6 +110,9 @@ public class ElementItem extends Element
     @Override
     public void mouseClicked(int mouseButton)
     {
+        if (item == null)
+            return;
+
         // remove item from player inventory if used successfully
         if (this.isHovered() && item.useItem())
             TextAdventure.getInstance().getPlayer().getInventory()[index] = null;
