@@ -1,7 +1,6 @@
 package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
-import de.nosswald.game.item.impl.ItemHealthPotion;
 import de.nosswald.game.level.Level;
 import de.nosswald.gui.element.impl.ElementButton;
 import de.nosswald.gui.element.impl.ElementComboBox;
@@ -51,8 +50,6 @@ public class GuiIngame extends GuiScreen
     {
         // create new game score
         TextAdventure.getInstance().createScore();
-
-        TextAdventure.getInstance().getPlayer().getInventory()[0] = new ItemHealthPotion();
 
         // add inventory frame
         this.registerElement(new ElementComboBox(10, 70, 200, 130));
