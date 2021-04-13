@@ -43,4 +43,9 @@ public abstract class Item
 
         return null;
     }
+
+    public int getBonusAttackDamage()
+    {
+        return 0;
+    }
 }
