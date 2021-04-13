@@ -1,5 +1,6 @@
 package de.nosswald.game;
 
+import de.nosswald.game.entity.Player;
 import de.nosswald.gui.GameFrame;
 import de.nosswald.gui.screen.impl.GuiMainMenu;
 import de.nosswald.game.level.LevelManager;
