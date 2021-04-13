@@ -15,9 +15,9 @@ import java.awt.*;
 @GuiScreen.ScreenData(title = "Confirm")
 public class GuiYesNo extends GuiScreen
 {
-    private GuiScreen parent;
-    private Callback callback;
-    private String[] lines;
+    private final GuiScreen parent;
+    private final Callback callback;
+    private final String[] lines;
 
     /**
      * @param parent    the parent screen

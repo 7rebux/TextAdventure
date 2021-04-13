@@ -34,7 +34,8 @@ public class GuiMainMenu extends GuiScreen
         settingsButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiSettings(this)));
 
         ElementButton quitButton = new ElementButton("Quit", centerX, centerY + 80, buttonWidth, buttonHeight);
-        quitButton.setClickAction(() -> System.exit(0));
+        quitButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(
+                new GuiYesNo(this, () -> System.exit(0), "Are you sure you want to quit?")));
 
         this.registerElement(playButton);
         this.registerElement(settingsButton);
