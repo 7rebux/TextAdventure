@@ -1,5 +1,6 @@
-package de.nosswald.game.entity;
+package de.nosswald.game.entity.impl;
 
+import de.nosswald.game.entity.Entity;
 import de.nosswald.game.item.Item;
 
 import java.util.Arrays;
@@ -8,12 +9,12 @@ import java.util.Arrays;
  * @author Nils Osswald
  * @version 1.0
  */
-public class Player extends Entity
+public class EntityPlayer extends Entity
 {
     private int mana;
     private final Item[] inventory = new Item[6];
 
-    public Player()
+    public EntityPlayer()
     {
         super(87, 2);
 
@@ -21,7 +22,7 @@ public class Player extends Entity
         this.mana = 43;
     }
 
-    public void attack(Enemy enemy)
+    public void attack(EntityEnemy enemy)
     {
         if (!(mana >= 10))
             return;

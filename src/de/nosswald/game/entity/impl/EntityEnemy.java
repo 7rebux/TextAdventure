@@ -1,4 +1,4 @@
-package de.nosswald.game.entity;
+package de.nosswald.game.entity.impl;
 
 import de.nosswald.game.entity.Entity;
 
@@ -6,11 +6,11 @@ import de.nosswald.game.entity.Entity;
  * @author Nils Osswald
  * @version 1.0
  */
-public class Enemy extends Entity
+public class EntityEnemy extends Entity
 {
     private String name;
 
-    public Enemy(int health, int damage, String name)
+    public EntityEnemy(int health, int damage, String name)
     {
         super(health, damage);
 

@@ -1,6 +1,6 @@
 package de.nosswald.game;
 
-import de.nosswald.game.entity.Player;
+import de.nosswald.game.entity.impl.EntityPlayer;
 import de.nosswald.gui.GameFrame;
 import de.nosswald.gui.screen.impl.GuiMainMenu;
 import de.nosswald.game.level.LevelManager;
@@ -24,7 +24,7 @@ public class TextAdventure
     private static TextAdventure instance;
 
     private GameFrame gameFrame;
-    private Player player;
+    private EntityPlayer player;
     private LevelManager levelManager;
 
     /**
@@ -56,7 +56,7 @@ public class TextAdventure
      */
     public void createScore()
     {
-        player = new Player();
+        player = new EntityPlayer();
     }
 
     /**
@@ -87,7 +87,7 @@ public class TextAdventure
      * @return the player object or null if theres no player
      */
     @Nullable
-    public Player getPlayer()
+    public EntityPlayer getPlayer()
     {
         return player;
     }
