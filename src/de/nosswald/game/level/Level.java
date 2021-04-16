@@ -96,8 +96,10 @@ public class Level
      */
     public void load(@NotNull GuiIngame screen)
     {
+        // set dialog box content
         screen.getDialogBox().setLines(dialogText);
 
+        // set answer buttons content
         int i = answers.size() - 1;
         for (Map.Entry<String, String> entry : answers.entrySet())
         {
@@ -115,9 +117,13 @@ public class Level
      */
     public void drawScreen(Graphics g)
     {
-        // draw level name
         g.setColor(Color.WHITE);
+
+        // draw level name
         g.drawString(name, 4, DrawUtils.getScreenHeight() - 4);
+
+        // draw character name
+        g.drawString(characterName, DrawUtils.getScreenWidth() - DrawUtils.getStringWidth(characterName, g), 335);
     }
 
     /**
