@@ -1,6 +1,7 @@
 # attributes (format: §(attribute name)=(value))
 §levelName=The Beginning
 §characterName=Character
+§enemy=Skeleton
 
 # dialog (format: [DIALOG](dialog text))
 [DIALOG]This text is being displayed in the dialog box.//This is a new line.
