@@ -2,8 +2,10 @@ package de.nosswald.game.entity.impl;
 
 import de.nosswald.game.entity.Entity;
 import de.nosswald.game.item.Item;
+import de.nosswald.game.item.impl.ItemHealthPotion;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * @author Nils Osswald
@@ -16,13 +18,17 @@ public class EntityPlayer extends Entity
 
     public EntityPlayer()
     {
-        super(87, 2);
+        super(50, 5);
 
-        // default values
-        this.mana = 43;
+        // set default values
+        this.mana = 25;
+
+        // add starter item
+        addItemToInventory(new ItemHealthPotion());
     }
 
-    public void attack(EntityEnemy enemy)
+    @Override
+    public void attack(Entity enemy)
     {
         if (!(mana >= 10))
             return;
@@ -51,5 +57,16 @@ public class EntityPlayer extends Entity
     public Item[] getInventory()
     {
         return inventory;
+    }
+
+    public void addItemToInventory(Item item)
+    {
+        IntStream.range(0, inventory.length).filter(i -> inventory[i] == null).findFirst().ifPresent(i -> inventory[i] = item);
+    }
+
+    @Override
+    public void onDeath()
+    {
+        // TODO GAME OVER
     }
 }
