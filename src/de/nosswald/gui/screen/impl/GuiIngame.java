@@ -1,6 +1,7 @@
 package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
+import de.nosswald.game.entity.impl.EntityEnemy;
 import de.nosswald.game.level.Level;
 import de.nosswald.gui.element.impl.ElementButton;
 import de.nosswald.gui.element.impl.ElementComboBox;
@@ -25,6 +26,7 @@ public class GuiIngame extends GuiScreen
     private ElementButton[] answerButton;
 
     private Level level;
+    private EntityEnemy enemy;
 
     private void renderGameOverlay(Graphics g)
     {
@@ -134,5 +136,10 @@ public class GuiIngame extends GuiScreen
     {
         this.level = level;
         level.load(this);
+    }
+
+    public void setEnemy(@NotNull EntityEnemy enemy)
+    {
+        this.enemy = enemy;
     }
 }

@@ -1,6 +1,9 @@
 package de.nosswald.game.level;
 
 import de.nosswald.game.TextAdventure;
+import de.nosswald.game.entity.impl.EntityEnemy;
+import de.nosswald.game.entity.impl.enemies.EnemySkeleton;
+import de.nosswald.game.entity.impl.enemies.EnemyZombie;
 import de.nosswald.gui.screen.impl.GuiIngame;
 import de.nosswald.utils.DrawUtils;
 import org.jetbrains.annotations.NotNull;
@@ -35,6 +38,9 @@ public class Level
 
     @Attribute(name = "characterName")
     public String characterName;
+
+    @Attribute(name = "enemy")
+    public String enemy;
 
     /**
      * creates a level object by its file path
@@ -108,6 +114,19 @@ public class Level
                     screen.setLevel(TextAdventure.getInstance().getLevelManager().getLevel(entry.getValue())));
             --i;
         }
+
+        // set enemy
+        if (enemy != null) screen.setEnemy(getEnemyByName(enemy));
+    }
+
+    private EntityEnemy getEnemyByName(String enemy)
+    {
+        return switch (enemy.toLowerCase())
+        {
+            case "zombie" -> new EnemyZombie();
+            case "skeleton" -> new EnemySkeleton();
+            default -> null;
+        };
     }
 
     /**
