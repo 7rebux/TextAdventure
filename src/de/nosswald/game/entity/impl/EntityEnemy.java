@@ -6,9 +6,9 @@ import de.nosswald.game.entity.Entity;
  * @author Nils Osswald
  * @version 1.0
  */
-public class EntityEnemy extends Entity
+public abstract class EntityEnemy extends Entity
 {
-    private String name;
+    protected String name;
 
     public EntityEnemy(int health, int damage, String name)
     {
@@ -26,6 +26,4 @@ public class EntityEnemy extends Entity
     {
         this.name = name;
     }
-
-    public void onDeath() { }
 }

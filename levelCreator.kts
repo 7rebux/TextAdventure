@@ -24,6 +24,9 @@ print("Enter level name: ")
 val levelName = readLine()!!
 print("Enter character name: ")
 val characterName = readLine()!!
+print("Enter enemy name (Leave blank for no enemy): ")
+val enemy = readLine()!!
+print(enemy)
 println()
 
 // dialog
@@ -51,7 +54,7 @@ continuation[2] = readLine()!!
 file.printWriter().use() { it ->
     it.println("§levelName=$levelName")
     it.println("§characterName=$characterName")
-
+    if (!enemy.equals("")) it.println("§enemy=$enemy")
     it.println("[DILOAG]$dialogText")
 
     for (i in 0..2)

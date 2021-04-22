@@ -4,15 +4,21 @@ package de.nosswald.game.entity;
  * @author Nils Osswald
  * @version 1.0
  */
-public class Entity
+public abstract class Entity
 {
-    private int health;
-    private int damage;
+    protected int health;
+    protected int damage;
 
     public Entity(int health, int damage)
     {
         this.health = health;
         this.damage = damage;
+    }
+
+    public void attack(Entity entity)
+    {
+        entity.setHealth(entity.getHealth() - getDamage());
+        if (entity.getHealth() <= 0) entity.onDeath();
     }
 
     public int getHealth()
@@ -34,4 +40,6 @@ public class Entity
     {
         this.damage = damage;
     }
+
+    public abstract void onDeath();
 }
