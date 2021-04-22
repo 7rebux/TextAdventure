@@ -1,7 +1,7 @@
 ### Anforderungen
 
 ## Termine
-- Zwischenpräsentation am 16. bzw. 23. April 2021 mit der ersten Vorführung desProgrammcodes
+- Zwischenpräsentation am 16. bzw. 23. April 2021 mit der ersten Vorführung des Programmcodes
 - Abgabe und Präsentation am 18. bzw 25. Juni 2021
 
 ## Programmiertechnische Anforderungen
