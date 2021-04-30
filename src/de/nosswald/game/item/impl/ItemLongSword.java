@@ -24,6 +24,10 @@ public class ItemLongSword extends Item
         return false; // unusable
     }
 
+    /**
+     * default value is zero
+     * @return the bonus attack damage stat
+     */
     @Override
     public int getBonusAttackDamage()
     {

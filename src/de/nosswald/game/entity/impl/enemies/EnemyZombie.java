@@ -16,6 +16,9 @@ public class EnemyZombie extends EntityEnemy
         super(20, 5, "Zombie");
     }
 
+    /**
+     * called if the entity dies
+     */
     @Override
     public void onDeath()
     {

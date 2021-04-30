@@ -44,6 +44,10 @@ public abstract class Item
         return null;
     }
 
+    /**
+     * default value is zero
+     * @return the bonus attack damage stat
+     */
     public int getBonusAttackDamage()
     {
         return 0;

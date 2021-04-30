@@ -27,43 +27,67 @@ public class EntityPlayer extends Entity
         addItemToInventory(new ItemHealthPotion());
     }
 
+    /**
+     * damages another entity and consumes mana
+     * @param entity the entity
+     */
     @Override
-    public void attack(Entity enemy)
+    public void attack(Entity entity)
     {
         if (!(mana >= 10))
             return;
 
-        enemy.setHealth(enemy.getHealth() - getDamage());
-        if (enemy.getHealth() <= 0) enemy.onDeath();
+        entity.setHealth(entity.getHealth() - getDamage());
+        if (entity.getHealth() <= 0) entity.onDeath();
         setMana(getMana() - 10);
     }
 
+    /**
+     * @return the mana
+     */
     public int getMana()
     {
         return mana;
     }
 
+    /**
+     * sets the mana
+     * @param mana the total mana
+     */
     public void setMana(int mana)
     {
         this.mana = mana;
     }
 
+    /**
+     * @return the damage (inclusive item stats)
+     */
     @Override
     public int getDamage()
     {
         return super.getDamage() + Arrays.stream(inventory).mapToInt(Item::getBonusAttackDamage).sum();
     }
 
+    /**
+     * @return the inventory as item array
+     */
     public Item[] getInventory()
     {
         return inventory;
     }
 
+    /**
+     * adds an item to the next empty slot in the inventory
+     * @param item the item
+     */
     public void addItemToInventory(Item item)
     {
         IntStream.range(0, inventory.length).filter(i -> inventory[i] == null).findFirst().ifPresent(i -> inventory[i] = item);
     }
 
+    /**
+     * called if the entity dies
+     */
     @Override
     public void onDeath()
     {
