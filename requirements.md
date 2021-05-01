@@ -19,7 +19,7 @@
 - [ ] Titel des Adventure Games
 - [ ] Beschreibung der Story des Spiels
 - [x] Spiellogik
-- [ ] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
+- [x] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
 - [ ] Rechtschreibung, Grammatik
 - [ ] Visualisierung der Map
 
@@ -35,7 +35,7 @@
 - [x] Einheitliche Namensgebung bei Klassen, Attributen, Operationen und Variablen(z.B. Operationsnamen sind klein geschrieben und fangen mit einem Verb an, ...)
 
 ### Präsentation
-- [ ] Zwischenpräsentation
+- [x] Zwischenpräsentation
 - [ ] Das Spiel
 - [ ] Vorstellung des Programmcodes
 
