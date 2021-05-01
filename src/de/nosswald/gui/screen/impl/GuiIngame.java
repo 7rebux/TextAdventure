@@ -103,8 +103,8 @@ public class GuiIngame extends GuiScreen
     {
         switch (keyCode)
         {
-            case KeyEvent.VK_ESCAPE:
-                TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiIngameMenu(this));
+            case KeyEvent.VK_ESCAPE -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiIngameMenu(this));
+            case KeyEvent.VK_F1 -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiTutorial(this));
         }
     }
 
@@ -132,12 +132,20 @@ public class GuiIngame extends GuiScreen
         return answerButton;
     }
 
+    /**
+     * sets the active level
+     * @param level the level
+     */
     public void setLevel(@NotNull Level level)
     {
         this.level = level;
         level.load(this);
     }
 
+    /**
+     * sets the active enemy
+     * @param enemy the enemy
+     */
     public void setEnemy(@NotNull EntityEnemy enemy)
     {
         this.enemy = enemy;

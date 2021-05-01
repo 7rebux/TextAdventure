@@ -4,7 +4,11 @@ import de.nosswald.game.entity.impl.EntityPlayer;
 import de.nosswald.gui.GameFrame;
 import de.nosswald.gui.screen.impl.GuiMainMenu;
 import de.nosswald.game.level.LevelManager;
+import de.nosswald.gui.screen.impl.GuiTutorial;
 import org.jetbrains.annotations.Nullable;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * @author Nils Osswald
@@ -21,6 +25,11 @@ public class TextAdventure
      */
     public static final int VERSION = 1;
 
+    /**
+     * this field determinates if the application is being started for the first time
+     */
+    private final boolean IS_FIRST_START;
+
     private static TextAdventure instance;
 
     private GameFrame gameFrame;
@@ -33,6 +42,13 @@ public class TextAdventure
     public TextAdventure()
     {
         instance = this;
+
+        // check if the application is being started for the first time
+        File file = new File("assets", "yep");
+        IS_FIRST_START = !file.exists();
+        System.out.println(IS_FIRST_START);
+        if (IS_FIRST_START)
+            try { file.createNewFile(); } catch (IOException ignored) { }
     }
 
     /**
@@ -44,8 +60,8 @@ public class TextAdventure
         gameFrame = new GameFrame();
         gameFrame.setVisible(true);
 
-        // load main menu screen
-        gameFrame.loadGuiScreen(new GuiMainMenu());
+        // load first gui screen
+        gameFrame.loadGuiScreen(IS_FIRST_START ? new GuiTutorial(new GuiMainMenu()) : new GuiMainMenu());
 
         // load levels
         levelManager = new LevelManager();
