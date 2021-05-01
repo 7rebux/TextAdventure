@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 public abstract class GuiScreen extends JPanel
 {
-    private ArrayList<Element> elements = new ArrayList<>();
+    private final ArrayList<Element> elements = new ArrayList<>();
     protected int mouseX, mouseY;
 
     /**
