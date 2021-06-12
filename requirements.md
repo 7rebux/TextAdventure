@@ -24,7 +24,7 @@
 - [ ] Visualisierung der Map
 
 ### Der Programmaufbau
-- [ ] UML-Klassendiagramm mit Klassen (ohne Attribute, Konstruktoren und Operationen), Assoziationen (Rollennamen und Multiplizitäten) und Vererbungsbeziehungen; muss mit dem Programmcode übereinstimmen
+- [x] UML-Klassendiagramm mit Klassen (ohne Attribute, Konstruktoren und Operationen), Assoziationen (Rollennamen und Multiplizitäten) und Vererbungsbeziehungen; muss mit dem Programmcode übereinstimmen
 
 ### Programmcode
 - [ ] Berücksichtigung der programmiertechnischen Anforderungen
