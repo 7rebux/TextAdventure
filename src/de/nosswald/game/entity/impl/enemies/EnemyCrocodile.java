@@ -9,11 +9,11 @@ import de.nosswald.game.item.impl.ItemManaPotion;
  * @author Nils Osswald
  * @version 1.0
  */
-public class EnemyZombie extends EntityEnemy
+public class EnemyCrocodile extends EntityEnemy
 {
-    public EnemyZombie()
+    public EnemyCrocodile()
     {
-        super(20, 5, "Zombie");
+        super(20, 5, "Crocodile");
     }
 
     /**

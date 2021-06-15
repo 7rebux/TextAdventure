@@ -8,11 +8,11 @@ import de.nosswald.game.item.impl.ItemLongSword;
  * @author Nils Osswald
  * @version 1.0
  */
-public class EnemySkeleton extends EntityEnemy
+public class EnemyMonkey extends EntityEnemy
 {
-    public EnemySkeleton()
+    public EnemyMonkey()
     {
-        super(10, 10, "Skeleton");
+        super(10, 10, "Monkey");
     }
 
     /**
