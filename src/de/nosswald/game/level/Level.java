@@ -2,8 +2,9 @@ package de.nosswald.game.level;
 
 import de.nosswald.game.TextAdventure;
 import de.nosswald.game.entity.impl.EntityEnemy;
-import de.nosswald.game.entity.impl.enemies.EnemySkeleton;
-import de.nosswald.game.entity.impl.enemies.EnemyZombie;
+import de.nosswald.game.entity.impl.enemies.*;
+import de.nosswald.game.item.Item;
+import de.nosswald.game.item.impl.*;
 import de.nosswald.gui.screen.impl.GuiIngame;
 import de.nosswald.utils.DrawUtils;
 import org.jetbrains.annotations.NotNull;
@@ -16,9 +17,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author Nils Osswald
@@ -26,6 +25,8 @@ import java.util.Scanner;
  */
 public class Level
 {
+    public String fileName;
+
     private String[] dialogText;
     private final HashMap<String, String> answers = new HashMap<>();
 
@@ -41,6 +42,9 @@ public class Level
 
     @Attribute(name = "enemy")
     public String enemy;
+
+    @Attribute(name = "reward")
+    public String reward;
 
     /**
      * creates a level object by its file path
@@ -93,6 +97,8 @@ public class Level
         }
         catch (FileNotFoundException | IllegalAccessException ignored) { }
 
+        fileName = path.getFileName().toString();
+
         return this;
     }
 
@@ -102,8 +108,28 @@ public class Level
      */
     public void load(@NotNull GuiIngame screen)
     {
+        // add reward to players inventory
+        if (reward != null)
+        {
+            Item rewardItem = getItemByName(reward);
+            TextAdventure.getInstance().getPlayer().addItemToInventory(rewardItem);
+        }
+
+        // clear enemy
+        screen.setEnemy(null);
+
+        // set enemy
+        if (enemy != null) screen.setEnemy(getEnemyByName(enemy));
+
         // set dialog box content
         screen.getDialogBox().setLines(dialogText);
+
+        // clear answer buttons
+        Arrays.asList(screen.getAnswerButton()).forEach(button ->
+        {
+            button.setTitle("");
+            button.setClickAction(null);
+        });
 
         // set answer buttons content
         int i = answers.size() - 1;
@@ -111,20 +137,33 @@ public class Level
         {
             screen.getAnswerButton()[i].setTitle(entry.getKey());
             screen.getAnswerButton()[i].setClickAction(() ->
-                    screen.setLevel(TextAdventure.getInstance().getLevelManager().getLevel(entry.getValue())));
+            {
+                if (screen.getEnemy() != null && !(screen.getEnemy().getHealth() <= 0))
+                    return;
+
+                screen.setLevel(Objects.requireNonNull(TextAdventure.getInstance().getLevelManager().getLevelByFileName(entry.getValue())));
+            });
             --i;
         }
-
-        // set enemy
-        if (enemy != null) screen.setEnemy(getEnemyByName(enemy));
     }
 
     private EntityEnemy getEnemyByName(String enemy)
     {
         return switch (enemy.toLowerCase())
         {
-            case "zombie" -> new EnemyZombie();
-            case "skeleton" -> new EnemySkeleton();
+            case "crocodile" -> new EnemyCrocodile();
+            case "monkey" -> new EnemyMonkey();
+            default -> null;
+        };
+    }
+
+    private Item getItemByName(String item)
+    {
+        return switch (item.toLowerCase())
+        {
+            case "healthpotion" -> new ItemHealthPotion();
+            case "manapotion" -> new ItemManaPotion();
+            case "longsword" -> new ItemLongSword();
             default -> null;
         };
     }
