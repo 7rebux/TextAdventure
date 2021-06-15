@@ -70,8 +70,21 @@ public class GuiIngame extends GuiScreen
         Arrays.setAll(answerButton, i -> new ElementButton("", i * 200, 299, 200, 40));
         Arrays.stream(answerButton).forEach(this::registerElement);
 
+        // add attack button
+        ElementButton attackButton = new ElementButton("Attack", 10, 210, 200, 30);
+        attackButton.setClickAction(() ->
+        {
+            if (enemy == null) return;
+            TextAdventure.getInstance().getPlayer().attack(enemy);
+            enemy.attack(TextAdventure.getInstance().getPlayer());
+
+            if (enemy.getHealth() == 0)
+                enemy = null;
+        });
+        this.registerElement(attackButton);
+
         // load first level
-        setLevel(TextAdventure.getInstance().getLevelManager().getLevel("The Beginning"));
+        setLevel(TextAdventure.getInstance().getLevelManager().getLevelByFileName("intro-1"));
     }
 
     /**
@@ -91,6 +104,11 @@ public class GuiIngame extends GuiScreen
 
         // draw active level
         level.drawScreen(g);
+
+        // draw enemy
+        if (enemy == null) return;
+        DrawUtils.drawStatusBar("Health", enemy.getHealth(), enemy.getMaxHealth(), DrawUtils.getScreenWidth() - 210,
+                10, 200, 20, Color.RED, g);
     }
 
     /**
@@ -146,8 +164,16 @@ public class GuiIngame extends GuiScreen
      * sets the active enemy
      * @param enemy the enemy
      */
-    public void setEnemy(@NotNull EntityEnemy enemy)
+    public void setEnemy(EntityEnemy enemy)
     {
         this.enemy = enemy;
+    }
+
+    /**
+     * @return the enemy
+     */
+    public EntityEnemy getEnemy()
+    {
+        return enemy;
     }
 }
