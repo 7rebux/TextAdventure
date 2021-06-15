@@ -41,7 +41,10 @@ public class ElementTextBox extends Element
     @Override
     public void drawScreen(Graphics g)
     {
+        Font tmp = g.getFont();
+
         g.setColor(Color.WHITE);
+        g.setFont(new Font("Dialog", Font.PLAIN, 14));
 
         // draw box
         g.drawRect(x, y, width, height);
@@ -56,6 +59,8 @@ public class ElementTextBox extends Element
             g.drawString(line, x + 4, y);
             y += DrawUtils.getStringHeight(line, g) + 4;
         }
+
+        g.setFont(tmp);
     }
 
     /**
