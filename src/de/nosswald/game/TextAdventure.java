@@ -46,7 +46,6 @@ public class TextAdventure
         // check if the application is being started for the first time
         File file = new File("assets", "yep");
         IS_FIRST_START = !file.exists();
-        System.out.println(IS_FIRST_START);
         if (IS_FIRST_START)
             try { file.createNewFile(); } catch (IOException ignored) { }
     }
@@ -102,7 +101,6 @@ public class TextAdventure
     /**
      * @return the player object or null if theres no player
      */
-    @Nullable
     public EntityPlayer getPlayer()
     {
         return player;
