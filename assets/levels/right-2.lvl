@@ -1,0 +1,5 @@
+§levelName=1.2 - Das Krokodil
+§characterName=Erzähler
+§enemy=Crocodile
+[DIALOG]Willkommen zu deinem ersten Kampf! Um deinem Gegner Schaden zu machen benutze den Knopf [Angreifen].//Jeder Angriff kostet dich 5 von deinem Mana. Nach jedem Angriff wird dein Gegner einen Gegenagriff ausführen.//Dabei kann der Schaden je nach Gegnertyp abweichen.//Besiegst du deinen Gegner erfolgreich besteht die Chance ein Gegenstand als Belohnung zu erhalten.////Es ist nicht möglich einem Kampf aus dem Weg zugehen verwende also deine Gegenstände möglichst sinvoll um//nicht zu sterben.
+[ANSWER]Weiter:right-3

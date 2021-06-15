@@ -1,0 +1,9 @@
+# attributes (format: §(attribute name)=(value))
+§levelName=1.1 - Einführung
+§characterName=Erzähler
+
+# dialog (format: [DIALOG](dialog text))
+[DIALOG]Willkommen zu *Name vom Spiel* , die Ärztin Senna hatte den Auftrag die Medikamente gegen das neuentstandene//Virus zum Volk "Noxus" zu bringen.//Auf dem Weg scheint Sie von den Nemacianen entführt zu werden.//Deine Aufgabe ist es, den König von Nemacia zu konfrontieren, der "Souleater", und Senna in Sicherheit zu bringen.////Klicke auf [Weiter] um dein Abenteuer zu beginnen.
+
+# answers buttons (format: [ANSWER](answer text):(level name)
+[ANSWER]Weiter:intro-2

@@ -1,0 +1,6 @@
+§levelName=1.3 - Einführung
+§characterName=Erzähler
+[DIALOG]Du bist am Eingang vom Dschungel. Entscheide dich, welchen weg du nehmen willst.//Wähle den rechten Weg für einen zusätzlichen Heilungstrank.//Beim linken Weg erhälst du einen neuen dir unbekannten Gegenstand.
+[ANSWER]Linker Weg:left-1
+[ANSWER]Rechter Weg:right-1
+[ANSWER]Zurück:intro-2
