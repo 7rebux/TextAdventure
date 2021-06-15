@@ -31,14 +31,15 @@ public class LevelManager
     }
 
     /**
-     * looks through all levels by its name
-     * @param name level name
+     * looks through all levels by its file name
+     * @param fileName level name
      * @return the level or null if no level was found
      */
     @Nullable
-    public Level getLevel(@NotNull String name)
+    public Level getLevelByFileName(@NotNull String fileName)
     {
-        return levels.stream().filter(level -> level.name.equals(name)).findFirst().orElse(null);
+        return levels.stream().filter(level -> level.fileName.replace(".lvl", "")
+                .equals(fileName.replace(".lvl", ""))).findFirst().orElse(null);
     }
 
     /**
