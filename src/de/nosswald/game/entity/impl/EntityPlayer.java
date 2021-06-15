@@ -5,6 +5,7 @@ import de.nosswald.game.item.Item;
 import de.nosswald.game.item.impl.ItemHealthPotion;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.stream.IntStream;
 
 /**
@@ -34,12 +35,13 @@ public class EntityPlayer extends Entity
     @Override
     public void attack(Entity entity)
     {
-        if (!(mana >= 10))
+        if (!(mana >= 5))
             return;
 
         entity.setHealth(entity.getHealth() - getDamage());
-        if (entity.getHealth() <= 0) entity.onDeath();
-        setMana(getMana() - 10);
+        if (entity.getHealth() < 0) entity.setHealth(0);
+        if (entity.getHealth() == 0) entity.onDeath();
+        setMana(getMana() - 5);
     }
 
     /**
@@ -65,7 +67,7 @@ public class EntityPlayer extends Entity
     @Override
     public int getDamage()
     {
-        return super.getDamage() + Arrays.stream(inventory).mapToInt(Item::getBonusAttackDamage).sum();
+        return super.getDamage() + Arrays.stream(inventory).filter(Objects::nonNull).mapToInt(Item::getBonusAttackDamage).sum();
     }
 
     /**
