@@ -19,7 +19,7 @@
 - [ ] Titel des Adventure Games
 - [ ] Beschreibung der Story des Spiels
 - [x] Spiellogik
-- [x] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
+- [ ] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
 - [ ] Rechtschreibung, Grammatik
 - [ ] Visualisierung der Map
 
