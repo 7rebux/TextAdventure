@@ -153,6 +153,7 @@ public class Level
         {
             case "crocodile" -> new EnemyCrocodile();
             case "monkey" -> new EnemyMonkey();
+            case "souleater" -> new EnemySoulEater();
             default -> null;
         };
     }
