@@ -1,0 +1,4 @@
+§levelName=Der Mensch
+§characterName=Du
+[DIALOG]"Ich bin auf der suche nach einer Ärztin die von Europa hierher geschickt wurde, um Medikamente//gegen das neue HIK Virus liefern soll. Laut meinem Bericht wurde Sie von den Nemacianer entführt, da diese Medikamente wertvoll sind."
+[ANSWER]Weiter:human-7

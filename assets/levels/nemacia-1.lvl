@@ -1,0 +1,5 @@
+§levelName=Weg nach Nemacia
+§characterName=Erzähler
+§enemy=Crocodile
+[DIALOG]Auf dem Weg nach Nemacia begegnest du einem Krokodil, besiege es um weiter zu kommen..
+[ANSWER]Weiter:nemacia-2

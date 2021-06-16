@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Lee
+[DIALOG]"Hallo. Ich bin Lee. Wie kann ich dir behilflich sein?"
+[ANSWER]Weiter:temple-6

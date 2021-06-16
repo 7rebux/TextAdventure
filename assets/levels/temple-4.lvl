@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Du
+[DIALOG]"Hallo Mönch. Wie heißt du?"
+[ANSWER]Weiter:temple-5

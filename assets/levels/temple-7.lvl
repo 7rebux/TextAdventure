@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Lee
+[DIALOG]""Ich habe dort Studiert und meine Religionslehre verbreitet als ich noch Jung war.//Nach dem Krieg wurden alle sehr egoistisch und Sie fingen an die Religiösen zu jagen,//da diese laut deren Gedanken sehr reich waren.//Ich bin ins Tempel geflohen, und seitdem wohne ich hier."
+[ANSWER]Wo ist Nemacia?:temple-8

@@ -1,0 +1,5 @@
+§levelName=Der Dschungel
+§characterName=Lee
+§enemy=Crocodile
+[DIALOG]"Los, worauf wartest du? Greif ihn an!"
+[ANSWER]Weiter:jungle-4

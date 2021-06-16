@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Erzähler
+[DIALOG]Du siehst in der Mittel vom Saal ein Mönch sitzen..
+[ANSWER]Ansprechen:temple-4

@@ -1,0 +1,5 @@
+§levelName=Der Affe
+§characterName=Erzähler
+[DIALOG]siehst in der Ferne einen Menschen.//Willst du dem Mensch folgen ?
+[ANSWER]Folgen:human-1
+[ANSWER]Ignorieren:temple-1

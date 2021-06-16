@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Erzähler
+[DIALOG]Du läufst weiter und findest einen Tempel.
+[ANSWER]Betreten:temple-2

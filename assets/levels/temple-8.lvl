@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Lee
+[DIALOG]"Nemacia ist am Ende der Dschungel. Bis dorthin wirst du auf Krokodile zutreffen die Hungrig sind.//Ich kann dir den Weg zu Nemacia zeigen, aber kämpfen kann ich nicht."
+[ANSWER]Weiter:jungle-1

@@ -1,0 +1,4 @@
+§levelName=Der Mensch
+§characterName=Erzähler
+[DIALOG]Du findest ein Affenmensch mit einem Stab.//Er ist 1,70 Meter groß und scheint auszusehen wie ein normaler Mensch.
+[ANSWER]Ansprechen:human-2

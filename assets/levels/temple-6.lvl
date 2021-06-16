@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Du
+[DIALOG]"Lee, kannst du mir etwas über Nemacia erzählen?"
+[ANSWER]Weiter:temple-7

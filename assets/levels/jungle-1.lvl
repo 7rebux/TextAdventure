@@ -1,0 +1,4 @@
+§levelName=Der Dschungel
+§characterName=Erzähler
+[DIALOG]Ihr läuft durch den Dschungel.. du siehst große Spinnen und Schlangen.. sowohl als Affen die auf den Bäumen klettern....//aufeinmal springt ein Krokodil aus dem Wasser!
+[ANSWER]Weiter:jungle-2

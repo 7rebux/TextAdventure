@@ -1,0 +1,4 @@
+§levelName=Der Dschungel
+§characterName=Lee
+[DIALOG]"Genügend Freizeit im Tempel, mein Junge."
+[ANSWER]Weiter:jungle-6

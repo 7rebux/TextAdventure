@@ -1,0 +1,4 @@
+§levelName=Der Mensch
+§characterName=Du
+[DIALOG]"Zu welchem Volk gehörst du, Menschenaffen?"
+[ANSWER]Weiter:human-3

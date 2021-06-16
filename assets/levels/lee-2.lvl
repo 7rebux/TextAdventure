@@ -1,0 +1,5 @@
+§levelName=Nemacia
+§characterName=Erzähler
+§enemy=SoulEater
+[DIALOG]Lee antwortert nicht. Sekunden später ist die Zeit eingefroren und nur du und Lee können sich bewegen. Lee hat alle diese Fähigkeiten gelernt und jetzt hat er endlich die Chance Sie zu nutzen. Du rennst in Nemacia rein und gehst direkt ins Nexus rein. Du siehst Senna in einem Käfig und nebendran den Souleater. Du nutzt die einfache Chance und attackierst ihn direkt..
+[ANSWER]Weiter:end-2

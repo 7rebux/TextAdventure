@@ -1,0 +1,4 @@
+§levelName=Der Tempel
+§characterName=Erzähler
+[DIALOG]Du bist im Tempel. Es ist sehr staubig und du kannst sehr wenig erkennen.
+[ANSWER]Weiter:temple-3
