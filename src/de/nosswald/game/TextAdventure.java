@@ -19,7 +19,7 @@ public class TextAdventure
     /**
      * the field that holds the application name
      */
-    public static final String NAME = "Text Adventure";
+    public static final String NAME = "Jungle Survival";
     /**
      * the field that holds the application version
      */

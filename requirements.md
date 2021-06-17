@@ -16,7 +16,7 @@
 - [x] Benutzeroberfläche kann in reiner Textform implementiert werden
 
 ### Der Spielinhalt
-- [ ] Titel des Adventure Games
+- [x] Titel des Adventure Games
 - [ ] Beschreibung der Story des Spiels
 - [x] Spiellogik
 - [ ] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
@@ -40,4 +40,4 @@
 - [ ] Vorstellung des Programmcodes
 
 ### Zusatzpunkte
-- [ ] Einbau von künstlicher Intelligenz
+~~- [ ] Einbau von künstlicher Intelligenz~~
