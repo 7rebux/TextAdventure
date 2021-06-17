@@ -107,6 +107,7 @@ public class GuiIngame extends GuiScreen
 
         // draw enemy
         if (enemy == null) return;
+        g.drawString(enemy.getName(),DrawUtils.getScreenWidth() - 220 - DrawUtils.getStringWidth(enemy.getName(), g), 24);
         DrawUtils.drawStatusBar("Health", enemy.getHealth(), enemy.getMaxHealth(), DrawUtils.getScreenWidth() - 210,
                 10, 200, 20, Color.RED, g);
     }
