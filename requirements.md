@@ -11,13 +11,13 @@
 - [x] ein Inventar, Zaubertränke, Gegenstände (items) oder etwas Äquivalentes
 - [x] mindestens zwei verschiedene Gegnertypen oder etwas Äquivalentes
 - [ ] eine Map oder etwas Äquivalentes
-- [ ] Implementierung einer Story
+- [x] Implementierung einer Story
 - [x] Berücksichtigung der 3-Schichten-Architektur
 - [x] Benutzeroberfläche kann in reiner Textform implementiert werden
 
 ### Der Spielinhalt
 - [x] Titel des Adventure Games
-- [ ] Beschreibung der Story des Spiels
+- [x] Beschreibung der Story des Spiels
 - [x] Spiellogik
 - [ ] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
 - [ ] Rechtschreibung, Grammatik
