@@ -154,6 +154,7 @@ public class Level
             case "crocodile" -> new EnemyCrocodile();
             case "monkey" -> new EnemyMonkey();
             case "souleater" -> new EnemySoulEater();
+            case "shark" -> new EnemyShark();
             default -> null;
         };
     }
@@ -165,6 +166,7 @@ public class Level
             case "healthpotion" -> new ItemHealthPotion();
             case "manapotion" -> new ItemManaPotion();
             case "longsword" -> new ItemLongSword();
+            case "waterstaff" -> new ItemWaterStaff();
             default -> null;
         };
     }
