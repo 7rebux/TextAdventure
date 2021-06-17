@@ -1,0 +1,4 @@
+§levelName=Die Schlucht
+§characterName=Du
+[DIALOG]"Kannst du mit mir kommen und mir helfen meine Mission fertig zu machen?//Ich muss eine Ärztin retten die von den Souleater gefangen wurde."
+[ANSWER]Weiter:canyon-7

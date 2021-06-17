@@ -1,0 +1,4 @@
+§levelName=Die Schlucht
+§characterName=Erzähler
+[DIALOG]Er führt dich zu einer Schlucht und dort siehst du seine Mitbewohnern.//Er ist ein ganz normaler Mensch wie du der aber mit seinem Stamm lebt.
+[ANSWER]Weiter:canyon-2

@@ -1,0 +1,6 @@
+§levelName=Segeln
+§characterName=Erzähler
+§enemy=Shark
+§reward=LongSword
+[DIALOG]Beim Segeln taucht ein großer Hai auf, der euch angreiffen will.//Du packst dein Item aus und greifst ihn an..
+[ANSWER]Weiter:sailing-3

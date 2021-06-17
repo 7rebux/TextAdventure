@@ -1,0 +1,4 @@
+§levelName=Das Haus
+§characterName=Erzähler
+[DIALOG]Du springst direkt auf das Kopf von dem Souleater und schießt mit deinem Wasserstab auf ihm
+[ANSWER]Springen:house-4

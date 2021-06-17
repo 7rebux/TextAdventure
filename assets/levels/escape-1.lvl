@@ -1,0 +1,5 @@
+§levelName=Die Flucht
+§characterName=Erzähler
+§reward=WaterStaff
+[DIALOG]Du hast Senna und verwendest den Wasserstab um wellen zu formen die für dich den Weg frei machen.
+[ANSWER]Weiter:escape-2

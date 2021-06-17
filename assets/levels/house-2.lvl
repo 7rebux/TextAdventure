@@ -1,0 +1,4 @@
+§levelName=Das Haus
+§characterName=Souleater
+[DIALOG]"Dich werde ich heute fressen und dann werde ich-"
+[ANSWER]Weiter:house-3

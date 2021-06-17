@@ -1,0 +1,4 @@
+§levelName=Die Flucht
+§characterName=Erzähler
+[DIALOG]Du reitest die Wellen mit dem Stab und ihr verschwindet schnell aus Nemacia.//Bevor du zur Küste gehst und Senna in Sicherheit bringst,//läufst du an dem NPC vorbei.//Als Geschenk für seine Hilfe gibst du ihm den Wasserstab und bedankst dich.
+[ANSWER]Weiter:escape-3

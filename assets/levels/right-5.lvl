@@ -1,0 +1,4 @@
+§levelName=Das Krokodil
+§characterName=NPC
+[DIALOG]Hallo! Über Nemacia reden wir Menschen nicht in der öffentlichkeit. Komm mit mir mit. *Button NPC Folgen* .
+[ANSWER]Folgen:canyon-1
