@@ -1,3 +1,4 @@
 §levelName=Das Ende
 §characterName=Erzähler
 [DIALOG]Ihr sperrt Ihn erfolgreich ein und trinkt einen Unsichtbar-Trank den der Affenmensch dabei hat.//Du erfährst dannach dass er ein Magier ist. Senna ist gerettet und//zusammen bringt ihr die Medikamente nach Noxus. Ihr werdet von der Europäischen Armee an der//Küste abgeholt und somit hast du deine Mission erfolgreich beendet!////Gut gemacht!
+[ANSWER]Beenden:null

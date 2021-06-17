@@ -1,8 +1,10 @@
 package de.nosswald.game.entity.impl;
 
+import de.nosswald.game.TextAdventure;
 import de.nosswald.game.entity.Entity;
 import de.nosswald.game.item.Item;
 import de.nosswald.game.item.impl.ItemHealthPotion;
+import de.nosswald.gui.screen.impl.GuiGameOver;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -93,6 +95,6 @@ public class EntityPlayer extends Entity
     @Override
     public void onDeath()
     {
-        // TODO GAME OVER
+        TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiGameOver());
     }
 }

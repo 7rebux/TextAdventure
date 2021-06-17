@@ -5,6 +5,7 @@ import de.nosswald.game.entity.impl.EntityEnemy;
 import de.nosswald.game.entity.impl.enemies.*;
 import de.nosswald.game.item.Item;
 import de.nosswald.game.item.impl.*;
+import de.nosswald.gui.screen.impl.GuiGoodGame;
 import de.nosswald.gui.screen.impl.GuiIngame;
 import de.nosswald.utils.DrawUtils;
 import org.jetbrains.annotations.NotNull;
@@ -136,13 +137,22 @@ public class Level
         for (Map.Entry<String, String> entry : answers.entrySet())
         {
             screen.getAnswerButton()[i].setTitle(entry.getKey());
-            screen.getAnswerButton()[i].setClickAction(() ->
-            {
-                if (screen.getEnemy() != null && !(screen.getEnemy().getHealth() <= 0))
-                    return;
 
-                screen.setLevel(Objects.requireNonNull(TextAdventure.getInstance().getLevelManager().getLevelByFileName(entry.getValue())));
-            });
+            if (entry.getKey().equals("Beenden"))
+            {
+                screen.getAnswerButton()[i].setClickAction(() ->
+                        TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiGoodGame()));
+            }
+            else
+            {
+                screen.getAnswerButton()[i].setClickAction(() ->
+                {
+                    if (screen.getEnemy() != null && !(screen.getEnemy().getHealth() <= 0))
+                        return;
+
+                    screen.setLevel(Objects.requireNonNull(TextAdventure.getInstance().getLevelManager().getLevelByFileName(entry.getValue())));
+                });
+            }
             --i;
         }
     }
