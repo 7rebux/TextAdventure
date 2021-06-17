@@ -10,7 +10,7 @@ public class EnemySoulEater extends EntityEnemy
 {
     public EnemySoulEater()
     {
-        super(50, 10, "SoulEater");
+        super(100, 10, "SoulEater");
     }
 
     /**
@@ -22,4 +22,3 @@ public class EnemySoulEater extends EntityEnemy
         // TODO something special
     }
 }
-
