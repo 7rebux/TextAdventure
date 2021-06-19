@@ -12,7 +12,7 @@ public class EnemyMonkey extends EntityEnemy
 {
     public EnemyMonkey()
     {
-        super(10, 10, "Monkey");
+        super(10, 10, "Affe");
     }
 
     /**

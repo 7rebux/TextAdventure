@@ -7,10 +7,10 @@ import de.nosswald.game.item.Item;
  * @version 1.0
  */
 @Item.ItemData(
-        name = "Water Staff",
+        name = "Wasser Stab",
         iconPath = "assets/items/water_staff.png",
         color = 0x0000ff,
-        description = { "Unusable" })
+        description = { "Nicht benutzbar" })
 public class ItemWaterStaff extends Item
 {
     /**

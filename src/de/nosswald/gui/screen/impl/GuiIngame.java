@@ -19,7 +19,7 @@ import java.util.Arrays;
  * @author Nils Osswald
  * @version 1.0
  */
-@GuiScreen.ScreenData(title = "Loading..")
+@GuiScreen.ScreenData(title = "Laden..")
 public class GuiIngame extends GuiScreen
 {
     private ElementTextBox dialogBox;
@@ -30,7 +30,7 @@ public class GuiIngame extends GuiScreen
 
     private void renderGameOverlay(Graphics g)
     {
-        String help = "Help [F1]    |   Ingame Menu [ESC]";
+        String help = "Hilfe [F1]    |   Pausemenü [ESC]";
 
         // draw help
         g.setColor(Color.WHITE);
@@ -38,7 +38,7 @@ public class GuiIngame extends GuiScreen
                 DrawUtils.getScreenHeight() - 4);
 
         // draw status bars
-        DrawUtils.drawStatusBar("Health", TextAdventure.getInstance().getPlayer().getHealth(), 100, 10,
+        DrawUtils.drawStatusBar("Leben", TextAdventure.getInstance().getPlayer().getHealth(), 100, 10,
                 10, 200, 20, Color.RED, g);
         DrawUtils.drawStatusBar("Mana", TextAdventure.getInstance().getPlayer().getMana(), 100, 10,
                 40, 200, 20, Color.BLUE, g);
@@ -71,7 +71,7 @@ public class GuiIngame extends GuiScreen
         Arrays.stream(answerButton).forEach(this::registerElement);
 
         // add attack button
-        ElementButton attackButton = new ElementButton("Attack", 10, 210, 200, 30);
+        ElementButton attackButton = new ElementButton("Angreifen", 10, 210, 200, 30);
         attackButton.setClickAction(() ->
         {
             if (enemy == null) return;
@@ -108,7 +108,7 @@ public class GuiIngame extends GuiScreen
         // draw enemy
         if (enemy == null) return;
         g.drawString(enemy.getName(),DrawUtils.getScreenWidth() - 220 - DrawUtils.getStringWidth(enemy.getName(), g), 24);
-        DrawUtils.drawStatusBar("Health", enemy.getHealth(), enemy.getMaxHealth(), DrawUtils.getScreenWidth() - 210,
+        DrawUtils.drawStatusBar("Leben", enemy.getHealth(), enemy.getMaxHealth(), DrawUtils.getScreenWidth() - 210,
                 10, 200, 20, Color.RED, g);
     }
 

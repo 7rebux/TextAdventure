@@ -8,10 +8,10 @@ import de.nosswald.game.item.Item;
  * @version 1.0
  */
 @Item.ItemData(
-        name = "Health Potion",
+        name = "Heiltrank",
         iconPath = "assets/items/health_potion.png",
         color = 0xff0000,
-        description = { "Restores 10 Health" })
+        description = { "Stellt 10 Leben her" })
 public class ItemHealthPotion extends Item
 {
     /**

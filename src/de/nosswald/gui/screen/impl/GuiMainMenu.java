@@ -11,7 +11,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
-@GuiScreen.ScreenData(title = "Main Menu")
+@GuiScreen.ScreenData(title = "Hauptmenü")
 public class GuiMainMenu extends GuiScreen
 {
     private final Image LOGO = Toolkit.getDefaultToolkit().getImage("assets/logo.png");
@@ -27,15 +27,15 @@ public class GuiMainMenu extends GuiScreen
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
         int centerY = (DrawUtils.getScreenHeight() - buttonHeight) / 2 + 50;
 
-        ElementButton playButton = new ElementButton("Play", centerX, centerY - 80, buttonWidth, buttonHeight);
+        ElementButton playButton = new ElementButton("Spielen", centerX, centerY - 80, buttonWidth, buttonHeight);
         playButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiIngame()));
 
-        ElementButton settingsButton = new ElementButton("Settings", centerX, centerY, buttonWidth, buttonHeight);
+        ElementButton settingsButton = new ElementButton("Einstellungen", centerX, centerY, buttonWidth, buttonHeight);
         settingsButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiSettings(this)));
 
-        ElementButton quitButton = new ElementButton("Quit", centerX, centerY + 80, buttonWidth, buttonHeight);
+        ElementButton quitButton = new ElementButton("Beenden", centerX, centerY + 80, buttonWidth, buttonHeight);
         quitButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(
-                new GuiYesNo(this, () -> System.exit(0), "Are you sure you want to quit?")));
+                new GuiYesNo(this, () -> System.exit(0), "Willst du das Spiel wirklich beenden?")));
 
         this.registerElement(playButton);
         this.registerElement(settingsButton);

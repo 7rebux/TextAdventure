@@ -23,7 +23,7 @@ public class GuiGoodGame extends GuiScreen
         int buttonWidth = 400;
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
 
-        ElementButton backButton = new ElementButton("Back To Main Menu", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
+        ElementButton backButton = new ElementButton("Zurück zum Hauptmenü", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
         backButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiMainMenu()));
 
         registerElement(backButton);
@@ -37,7 +37,7 @@ public class GuiGoodGame extends GuiScreen
     @Override
     public void drawScreen(Graphics g)
     {
-        String str = "You have successfully completed the game! Good Game!";
+        String str = "Du hast das Spiel erfolgreich abgeschlossen! Good Game!";
         g.setColor(Color.WHITE);
         g.drawString(str, (DrawUtils.getScreenWidth() - DrawUtils.getStringWidth(str, g)) / 2, DrawUtils.getScreenHeight() / 2);
     }

@@ -8,8 +8,6 @@ import de.nosswald.utils.DrawUtils;
 
 import java.awt.*;
 
-// TODO this screen has to be opened first on the first startup
-
 /**
  * @author Nils Osswald
  * @version 1.0
@@ -40,7 +38,7 @@ public class GuiTutorial extends GuiScreen
         }, 20, 20, DrawUtils.getScreenWidth() - 40, DrawUtils.getScreenHeight() - 130);
 
 
-        ElementButton backButton = new ElementButton("Back", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
+        ElementButton backButton = new ElementButton("Zurück", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
         backButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(parent));
 
         this.registerElement(textBox);
@@ -53,10 +51,7 @@ public class GuiTutorial extends GuiScreen
      * @param g the graphics object
      */
     @Override
-    public void drawScreen(Graphics g)
-    {
-
-    }
+    public void drawScreen(Graphics g) { }
 
     /**
      * called on keyboard input

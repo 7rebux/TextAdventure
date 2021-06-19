@@ -12,7 +12,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
-@GuiScreen.ScreenData(title = "Confirm")
+@GuiScreen.ScreenData(title = "Bestätigen")
 public class GuiYesNo extends GuiScreen
 {
     private final GuiScreen parent;
@@ -42,10 +42,10 @@ public class GuiYesNo extends GuiScreen
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
         int centerY = (DrawUtils.getScreenHeight() - buttonHeight) / 2;
 
-        ElementButton yesButton = new ElementButton("Yes", centerX - buttonWidth, centerY, buttonWidth, buttonHeight);
+        ElementButton yesButton = new ElementButton("Ja", centerX - buttonWidth, centerY, buttonWidth, buttonHeight);
         yesButton.setClickAction(() -> callback.confirm());
 
-        ElementButton noButton = new ElementButton("No", centerX + buttonWidth, centerY, buttonWidth, buttonHeight);
+        ElementButton noButton = new ElementButton("Nein", centerX + buttonWidth, centerY, buttonWidth, buttonHeight);
         noButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(parent));
 
         registerElement(yesButton);

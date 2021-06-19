@@ -27,7 +27,7 @@ public class GameFrame extends JFrame
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // middle screen
 
-        setTitle("Loading..");
+        setTitle("Laden..");
     }
 
     /**

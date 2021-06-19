@@ -13,7 +13,7 @@ public class EnemyCrocodile extends EntityEnemy
 {
     public EnemyCrocodile()
     {
-        super(20, 5, "Crocodile");
+        super(20, 5, "Krokodil");
     }
 
     /**

@@ -10,15 +10,12 @@ public class EnemySoulEater extends EntityEnemy
 {
     public EnemySoulEater()
     {
-        super(100, 10, "SoulEater");
+        super(100, 10, "Soul Eater");
     }
 
     /**
      * called if the entity dies
      */
     @Override
-    public void onDeath()
-    {
-        // TODO something special
-    }
+    public void onDeath() { }
 }

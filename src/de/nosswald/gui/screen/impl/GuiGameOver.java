@@ -23,7 +23,7 @@ public class GuiGameOver extends GuiScreen
         int buttonWidth = 400;
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
 
-        ElementButton backButton = new ElementButton("Back To Main Menu", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
+        ElementButton backButton = new ElementButton("Zurück zum Hauptmenü", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
         backButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiMainMenu()));
 
         registerElement(backButton);

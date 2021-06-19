@@ -37,7 +37,7 @@ public class ElementComboBox extends Element
     public void drawScreen(Graphics g)
     {
         int gap = width / 10;
-        String title = "Inventory";
+        String title = "Inventar";
 
         g.setColor(Color.WHITE);
 

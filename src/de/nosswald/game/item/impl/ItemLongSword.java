@@ -7,10 +7,10 @@ import de.nosswald.game.item.Item;
  * @version 1.0
  */
 @Item.ItemData(
-        name = "Long Sword",
+        name = "Langschwert",
         iconPath = "assets/items/long_sword.png",
         color = 0x545a66,
-        description = { "+5 Attack Damage" })
+        description = { "+5 Angriffsschaden" })
 public class ItemLongSword extends Item
 {
     /**

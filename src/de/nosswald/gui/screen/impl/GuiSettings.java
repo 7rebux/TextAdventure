@@ -14,10 +14,10 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
-@GuiScreen.ScreenData(title = "Settings")
+@GuiScreen.ScreenData(title = "Einstellungen")
 public class GuiSettings extends GuiScreen
 {
-    private GuiScreen parent;
+    private final GuiScreen parent;
 
     /**
      * @param parent the parent screen
@@ -36,7 +36,7 @@ public class GuiSettings extends GuiScreen
         int buttonWidth = 200;
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
 
-        ElementButton saveButton = new ElementButton("Save", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
+        ElementButton saveButton = new ElementButton("Speichern", centerX,DrawUtils.getScreenHeight() - 70, buttonWidth, 30);
         saveButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(parent));
 
         this.registerElement(saveButton);

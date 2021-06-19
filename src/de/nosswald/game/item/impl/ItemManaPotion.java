@@ -8,10 +8,10 @@ import de.nosswald.game.item.Item;
  * @version 1.0
  */
 @Item.ItemData(
-        name = "Mana Potion",
+        name = "Manatrank",
         iconPath = "assets/items/mana_potion.png",
         color = 0x0000ff,
-        description = { "Restores 25 Mana" })
+        description = { "Stellt 25 Mana her" })
 public class ItemManaPotion extends Item
 {
     /**
@@ -27,7 +27,7 @@ public class ItemManaPotion extends Item
         if (mana >= 100)
             return false;
 
-        TextAdventure.getInstance().getPlayer().setMana(mana >= 90 ? 100 : mana + 10);
+        TextAdventure.getInstance().getPlayer().setMana(mana >= 75 ? 100 : mana + 25);
 
         return true;
     }

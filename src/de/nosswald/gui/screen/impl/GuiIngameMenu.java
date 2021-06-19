@@ -12,10 +12,10 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
-@GuiScreen.ScreenData(title = "Ingame Menu")
+@GuiScreen.ScreenData(title = "Pausemenü")
 public class GuiIngameMenu extends GuiScreen
 {
-    private GuiScreen parent;
+    private final GuiScreen parent;
 
     /**
      * @param parent the parent screen
@@ -36,16 +36,16 @@ public class GuiIngameMenu extends GuiScreen
         int centerX = (DrawUtils.getScreenWidth() - buttonWidth) / 2;
         int centerY = (DrawUtils.getScreenHeight() - buttonHeight) / 2;
 
-        ElementButton continueButton = new ElementButton("Continue", centerX, centerY - 80, buttonWidth, buttonHeight);
+        ElementButton continueButton = new ElementButton("Fortsetzen", centerX, centerY - 80, buttonWidth, buttonHeight);
         continueButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(parent));
 
-        ElementButton settingsButton = new ElementButton("Settings", centerX, centerY, buttonWidth, buttonHeight);
+        ElementButton settingsButton = new ElementButton("Einstellungen", centerX, centerY, buttonWidth, buttonHeight);
         settingsButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiSettings(this)));
 
-        ElementButton quitButton = new ElementButton("Main Menu", centerX, centerY + 80, buttonWidth, buttonHeight);
+        ElementButton quitButton = new ElementButton("Hauptmenü", centerX, centerY + 80, buttonWidth, buttonHeight);
         quitButton.setClickAction(() -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(
                 new GuiYesNo(this, () -> TextAdventure.getInstance().getGameFrame().loadGuiScreen(new GuiMainMenu()),
-                        "Are you sure you want to go back?", "All progress made will be lost forever.")));
+                        "Willst du wirklich zum Hauptmenü zurückkehren?", "Jeglicher Fortschritt wird verloren gehen!")));
 
         this.registerElement(continueButton);
         this.registerElement(settingsButton);
