@@ -10,7 +10,7 @@
 - [x] mindestens eine sinnvolle abstrakte Klasse mit mindestens einer sinnvollen abstrakten Operation.
 - [x] ein Inventar, Zaubertränke, Gegenstände (items) oder etwas Äquivalentes
 - [x] mindestens zwei verschiedene Gegnertypen oder etwas Äquivalentes
-- [ ] eine Map oder etwas Äquivalentes
+- [x] eine Map oder etwas Äquivalentes
 - [x] Implementierung einer Story
 - [x] Berücksichtigung der 3-Schichten-Architektur
 - [x] Benutzeroberfläche kann in reiner Textform implementiert werden
@@ -21,13 +21,13 @@
 - [x] Spiellogik
 - [ ] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
 - [ ] Rechtschreibung, Grammatik
-- [ ] Visualisierung der Map
+- [x] Visualisierung der Map
 
 ### Der Programmaufbau
 - [x] UML-Klassendiagramm mit Klassen (ohne Attribute, Konstruktoren und Operationen), Assoziationen (Rollennamen und Multiplizitäten) und Vererbungsbeziehungen; muss mit dem Programmcode übereinstimmen
 
 ### Programmcode
-- [ ] Berücksichtigung der programmiertechnischen Anforderungen
+- [x] Berücksichtigung der programmiertechnischen Anforderungen
 - [x] Sinnvolle Kommentare im Programmcode
 - [x] Dokumentationskommentare für die Klassen und Operationen (JavaDoc-Kommentare)
 - [x] Abfangen von fehlerhaften Eingaben des Benutzers
