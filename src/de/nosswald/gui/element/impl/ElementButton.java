@@ -54,6 +54,12 @@ public class ElementButton extends Element
         g.setColor(Color.CYAN);
         g.drawRect(x, y, width, height);
 
+        if (isHovered())
+        {
+            g.setColor(Color.CYAN.darker().darker());
+            g.fillRect(x + 1, y + 1, width - 1, height - 1);
+            g.setColor(Color.WHITE);
+        }
 
         // draw text
         g.drawString(title,
