@@ -1,5 +1,5 @@
 §levelName=Der Mensch
 §characterName=Mensch
-[DIALOG]"ich gehöre zur Affentribe. Wir sind zu allen freundlich.. außer die Nemacians. Die mögen wir nicht."
+[DIALOG]"Ich gehöre zur Affentribe. Wir sind zu allen freundlich..//außer zu den Nemacians. Die mögen wir nicht."
 [ANSWER]Wo kann ich sie finden?:human-5
 [ANSWER]Wer sind die?:human-4

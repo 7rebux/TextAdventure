@@ -1,4 +1,4 @@
 §levelName=Die Flucht
 §characterName=Du
-[DIALOG]"Danke für deine Hilfe. Ohne dich wäre ich nicht so leicht in Nemacia reingekommen.//Ich habe alles niedergeschlagen mit diesem Stab, und jetzt kannst du Nemacia erobern und deine//Mitbewohner einen besseren Ort zum schlafen geben.////Ich hoffe wir treffen uns nochmal."
+[DIALOG]"Danke für deine Hilfe. Ohne dich wäre ich nicht so leicht in Nemacia reingekommen.//Ich habe alles niedergeschlagen mit diesem Stab, und jetzt kannst du Nemacia erobern und deinen//Mitbewohnern einen besseren Ort zum schlafen geben.////Ich hoffe wir treffen uns nochmal."
 [ANSWER]Weiter:end-3

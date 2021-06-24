@@ -1,5 +1,5 @@
 §levelName=Einführung
 §characterName=Erzähler
-[DIALOG]Wie du sehen kannst, hast du bereits ein Gegenstand in deinem Inventar.//Dieser ermöglicht es dir 10 Leben zu heilen.
+[DIALOG]Wie du sehen kannst, hast du bereits einen Gegenstand in deinem Inventar.//Dieser ermöglicht es dir 10 Leben zu heilen.
 [ANSWER]Weiter:intro-3
 [ANSWER]Zurück:intro-1

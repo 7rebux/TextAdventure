@@ -1,5 +1,5 @@
 §levelName=Das Haus
 §characterName=Erzähler
 §enemy=SoulEater
-[DIALOG]Du töteste Souleater, nehme jetzt Senna in Sicherheit und haue ab!
+[DIALOG]Du töteste den SoulEater! Nimm jetzt Senna in Sicherheit und hau ab!
 [ANSWER]Abhauen:escape-1

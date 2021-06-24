@@ -2,3 +2,4 @@
 §characterName=NPC
 [DIALOG]"Wenn das passiert, darf dieser Mensch nicht in der Öffentlichkeit über seiner Vergangenheit sprechen und//er darf auch nicht darüber sprechen was in Nemacia passiert, weil wenn es die Wächter erfahren,//werden diese Menschen exekutiert."
 [ANSWER]Weiter:canyon-4
+[ANSWER]Zurück:canyon-2

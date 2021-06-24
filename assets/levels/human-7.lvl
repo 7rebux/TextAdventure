@@ -2,5 +2,5 @@
 §characterName=Erzähler
 §enemy=Monkey
 §reward=LongSword
-[DIALOG]Um dort zu gelangen musst du erst gut trainiert sein.//Versuche dich doch mal an diesem Affen mit deinem neuen Item..
+[DIALOG]Um dorthin zu gelangen, musst du erst gut trainiert sein.//Versuche dich doch mal an diesem Affen mit deinem neuen Item..
 [ANSWER]Weiter:human-8

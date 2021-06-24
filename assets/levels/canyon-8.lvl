@@ -1,4 +1,5 @@
 §levelName=Die Schlucht
 §characterName=Erzähler
-[DIALOG]Ihr nimmt den Fluss, weil es ein Kanal gibt ,der euch direkt in die Mitte der Stadt führt.
+[DIALOG]Ihr nehmt den Fluss, weil es einen Kanal gibt ,der euch direkt in die Mitte der Stadt führt.
 [ANSWER]Weiter:sailing-1
+[ANSWER]Zurück:canyon-7

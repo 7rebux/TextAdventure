@@ -2,3 +2,4 @@
 §characterName=NPC
 [DIALOG]"Ich kann dir helfen in Nemacia reinzukommen, da ich alle Eingänge und alle Verstecke kenne.//Kämpfen werde ich nicht, weil ich sonst dafür direkt auf der Stelle getötet werde."
 [ANSWER]Weiter:canyon-8
+[ANSWER]Zurück:canyon-6

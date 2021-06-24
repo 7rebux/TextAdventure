@@ -2,3 +2,4 @@
 §characterName=Du
 [DIALOG]"Du weißt also wo Nemacia ist?"
 [ANSWER]Weiter:canyon-5
+[ANSWER]Zurück:canyon-3

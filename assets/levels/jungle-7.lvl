@@ -1,4 +1,4 @@
 §levelName=Der Dschungel
 §characterName=Lee
-[DIALOG]"Ich bin ein Pazifist gegenüber Menschen. Ich werde niemanden Töten.//Ich kann meine Fähigkeiten nutzen um dir zu Helfen, ich leihe dir auch meine Machete aus, aber wenn du meine Hilfe willst,//musst du mir am Ende alle deine Items schenken und mir versprechen dass du nie wieder unser Land betrittst."
+[DIALOG]"Ich bin ein Pazifist gegenüber Menschen. Ich werde niemanden Töten.//Ich kann meine Fähigkeiten nutzen um dir zu Helfen, ich leihe dir auch meine Machete aus, aber wenn du meine Hilfe willst,//musst du mir am Ende alle deine Items schenken und mir versprechen, dass du nie wieder unser Land betrittst."
 [ANSWER]Angebot annehmen:jungle-8

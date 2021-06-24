@@ -2,3 +2,4 @@
 §characterName=NPC
 [DIALOG]"Ja. Ich wurde als Kind schon weggeschickt weil meine Familie damals gegen das Regime war.//Ich bin dann hier aufgenommen worden und aufgewachsen."
 [ANSWER]Weiter:canyon-6
+[ANSWER]Zurück:canyon-4

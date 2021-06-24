@@ -1,4 +1,5 @@
 §levelName=Die Schlucht
 §characterName=NPC
-[DIALOG]"Wir sind alle ehemalige Nemacia mitbewohner. Alle Menschen die jemals in Nemacia gelebt haben werden hierher gebracht.//Sie werden meistens weggeschickt weil sie gegen das Nemanische Gesetz oder den Souleater nicht respektiert  haben."
+[DIALOG]"Wir sind alle ehemalige Nemacia Mitbewohner. Alle Menschen, die jemals in Nemacia gelebt haben, werden hierher gebracht.//Sie werden meistens weggeschickt, weil sie gegen das Nemanische Gesetz oder den SoulEater nicht respektiert haben."
 [ANSWER]Weiter:canyon-3
+[ANSWER]Zurück:canyon-1
