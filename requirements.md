@@ -20,7 +20,7 @@
 - [x] Beschreibung der Story des Spiels
 - [x] Spiellogik
 - [x] Eine Spielanleitung; sie kann auch im Spiel integriert sein, muss jedoch zu Beginn auftauchen
-- [ ] Rechtschreibung, Grammatik
+- [x] Rechtschreibung, Grammatik
 - [x] Visualisierung der Map
 
 ### Der Programmaufbau
