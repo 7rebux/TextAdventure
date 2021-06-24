@@ -41,12 +41,4 @@ public class LevelManager
         return levels.stream().filter(level -> level.fileName.replace(".lvl", "")
                 .equals(fileName.replace(".lvl", ""))).findFirst().orElse(null);
     }
-
-    /**
-     * @return all levels
-     */
-    public ArrayList<Level> getLevels()
-    {
-        return levels;
-    }
 }

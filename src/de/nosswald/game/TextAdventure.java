@@ -5,7 +5,6 @@ import de.nosswald.gui.GameFrame;
 import de.nosswald.gui.screen.impl.GuiMainMenu;
 import de.nosswald.game.level.LevelManager;
 import de.nosswald.gui.screen.impl.GuiTutorial;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.IOException;
