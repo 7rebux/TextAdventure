@@ -55,15 +55,6 @@ public abstract class Entity
     }
 
     /**
-     * sets the base damage (without items)
-     * @param damage total damage
-     */
-    public void setDamage(int damage)
-    {
-        this.damage = damage;
-    }
-
-    /**
      * called if the entity dies
      */
     public abstract void onDeath();

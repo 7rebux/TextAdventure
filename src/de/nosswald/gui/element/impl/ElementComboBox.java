@@ -9,6 +9,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class ElementComboBox extends Element
 {
     /**

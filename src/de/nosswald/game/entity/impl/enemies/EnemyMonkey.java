@@ -8,6 +8,7 @@ import de.nosswald.game.item.impl.ItemLongSword;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class EnemyMonkey extends EntityEnemy
 {
     public EnemyMonkey()

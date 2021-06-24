@@ -7,6 +7,7 @@ import de.nosswald.game.item.Item;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @Item.ItemData(
         name = "Manatrank",
         iconPath = "assets/items/mana_potion.png",

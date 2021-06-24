@@ -81,12 +81,4 @@ public class GameFrame extends JFrame
         // double backslash needed to escape regex syntax
         return super.getTitle().split(" \\|")[0];
     }
-
-    /**
-     * @return the current gui screen
-     */
-    public GuiScreen getCurrentScreen()
-    {
-        return currentScreen;
-    }
 }

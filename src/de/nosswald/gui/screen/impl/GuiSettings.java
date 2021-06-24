@@ -1,8 +1,6 @@
 package de.nosswald.gui.screen.impl;
 
 import de.nosswald.game.TextAdventure;
-import de.nosswald.game.item.impl.ItemHealthPotion;
-import de.nosswald.game.item.impl.ItemManaPotion;
 import de.nosswald.gui.element.impl.*;
 import de.nosswald.gui.screen.GuiScreen;
 import de.nosswald.utils.DrawUtils;
@@ -14,6 +12,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @GuiScreen.ScreenData(title = "Einstellungen")
 public class GuiSettings extends GuiScreen
 {

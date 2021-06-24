@@ -8,7 +8,10 @@ import java.awt.*;
  */
 public abstract class Element
 {
-    protected int x, y, width, height;
+    protected final int x;
+    protected final int y;
+    protected final int width;
+    protected final int height;
     public int mouseX, mouseY;
 
     /**

@@ -24,6 +24,7 @@ import java.util.*;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Level
 {
     public String fileName;

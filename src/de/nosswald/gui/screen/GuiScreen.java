@@ -16,6 +16,7 @@ import java.util.ArrayList;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("EmptyMethod")
 public abstract class GuiScreen extends JPanel
 {
     private final ArrayList<Element> elements = new ArrayList<>();

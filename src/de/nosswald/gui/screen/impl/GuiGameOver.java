@@ -11,6 +11,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @GuiScreen.ScreenData(title = "Game Over")
 public class GuiGameOver extends GuiScreen
 {

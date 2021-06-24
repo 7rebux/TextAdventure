@@ -13,6 +13,7 @@ import java.awt.*;
  * @version 1.0
  */
 @GuiScreen.ScreenData(title = "Bestätigen")
+@SuppressWarnings("SpellCheckingInspection")
 public class GuiYesNo extends GuiScreen
 {
     private final GuiScreen parent;
@@ -43,6 +44,7 @@ public class GuiYesNo extends GuiScreen
         int centerY = (DrawUtils.getScreenHeight() - buttonHeight) / 2;
 
         ElementButton yesButton = new ElementButton("Ja", centerX - buttonWidth, centerY, buttonWidth, buttonHeight);
+        //noinspection Convert2MethodRef
         yesButton.setClickAction(() -> callback.confirm());
 
         ElementButton noButton = new ElementButton("Nein", centerX + buttonWidth, centerY, buttonWidth, buttonHeight);

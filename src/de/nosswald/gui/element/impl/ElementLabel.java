@@ -10,14 +10,12 @@ import java.awt.*;
  */
 public class ElementLabel extends Element
 {
-    private String text;
+    private final String text;
 
     /**
      * @param text   label text
      * @param x      element position x
      * @param y      element position y
-     * @param width  element width measured in pixels
-     * @param height element height measured in pixels
      */
     public ElementLabel(String text, int x, int y)
     {
@@ -58,8 +56,6 @@ public class ElementLabel extends Element
      * called on mouse input
      *
      * @param mouseButton the mouse button
-     * @param mouseX      the x mouse position
-     * @param mouseY      the y mouse position
      */
     @Override
     public void mouseClicked(int mouseButton) { }

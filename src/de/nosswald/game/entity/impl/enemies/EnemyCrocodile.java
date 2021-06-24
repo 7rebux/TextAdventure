@@ -9,6 +9,7 @@ import de.nosswald.game.item.impl.ItemManaPotion;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class EnemyCrocodile extends EntityEnemy
 {
     public EnemyCrocodile()

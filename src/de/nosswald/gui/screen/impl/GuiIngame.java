@@ -19,6 +19,7 @@ import java.util.Arrays;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @GuiScreen.ScreenData(title = "Laden..")
 public class GuiIngame extends GuiScreen
 {

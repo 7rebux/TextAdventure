@@ -13,6 +13,7 @@ import java.util.Comparator;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("ConstantConditions")
 public class ElementItem extends Element
 {
     private Item item;
@@ -42,6 +43,7 @@ public class ElementItem extends Element
      *
      * @param g the graphics object
      */
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void drawScreen(Graphics g)
     {

@@ -11,6 +11,7 @@ import java.awt.*;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @GuiScreen.ScreenData(title = "Good Game")
 public class GuiGoodGame extends GuiScreen
 {

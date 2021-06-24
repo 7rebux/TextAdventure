@@ -8,7 +8,7 @@ import de.nosswald.game.entity.Entity;
  */
 public abstract class EntityEnemy extends Entity
 {
-    public int maxHealth;
+    public final int maxHealth;
 
     protected String name;
 
@@ -31,15 +31,6 @@ public abstract class EntityEnemy extends Entity
     public String getName()
     {
         return name;
-    }
-
-    /**
-     * sets the name
-     * @param name the name
-     */
-    public void setName(String name)
-    {
-        this.name = name;
     }
 
     public int getMaxHealth()

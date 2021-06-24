@@ -6,6 +6,7 @@ import de.nosswald.game.item.Item;
  * @author Nils Osswald
  * @version 1.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 @Item.ItemData(
         name = "Wasser Stab",
         iconPath = "assets/items/water_staff.png",
