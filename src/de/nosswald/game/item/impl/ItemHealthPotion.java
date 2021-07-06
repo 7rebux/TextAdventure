@@ -12,7 +12,7 @@ import de.nosswald.game.item.Item;
         name = "Heiltrank",
         iconPath = "assets/items/health_potion.png",
         color = 0xff0000,
-        description = { "Stellt 10 Leben her" })
+        description = { "Stellt 25 Leben her" })
 public class ItemHealthPotion extends Item
 {
     /**
@@ -27,7 +27,7 @@ public class ItemHealthPotion extends Item
         if (health >= 100)
             return false;
 
-        TextAdventure.getInstance().getPlayer().setHealth(health > 90 ? 100 : health + 10);
+        TextAdventure.getInstance().getPlayer().setHealth(health > 75 ? 100 : health + 25);
 
         return true;
     }

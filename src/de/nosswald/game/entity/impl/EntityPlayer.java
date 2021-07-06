@@ -24,7 +24,7 @@ public class EntityPlayer extends Entity
         super(50, 5);
 
         // set default values
-        this.mana = 25;
+        this.mana = 50;
 
         // add starter item
         addItemToInventory(new ItemHealthPotion());

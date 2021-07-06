@@ -3,7 +3,9 @@ package de.nosswald.game.entity.impl.enemies;
 
 import de.nosswald.game.TextAdventure;
 import de.nosswald.game.entity.impl.EntityEnemy;
+import de.nosswald.game.item.impl.ItemHealthPotion;
 import de.nosswald.game.item.impl.ItemLongSword;
+import de.nosswald.game.item.impl.ItemManaPotion;
 
 /**
  * @author Nils Osswald
@@ -22,7 +24,8 @@ public class EnemyShark extends EntityEnemy
     @Override
     public void onDeath()
     {
-        if (Math.random() <= 0.5D)
-            TextAdventure.getInstance().getPlayer().addItemToInventory(new ItemLongSword());
+        TextAdventure.getInstance().getPlayer().addItemToInventory(new ItemHealthPotion());
+        TextAdventure.getInstance().getPlayer().addItemToInventory(new ItemManaPotion());
+        if (Math.random() <= 0.5D) TextAdventure.getInstance().getPlayer().addItemToInventory(new ItemLongSword());
     }
 }

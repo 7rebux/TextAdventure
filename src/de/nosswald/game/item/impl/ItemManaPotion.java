@@ -12,7 +12,7 @@ import de.nosswald.game.item.Item;
         name = "Manatrank",
         iconPath = "assets/items/mana_potion.png",
         color = 0x0000ff,
-        description = { "Stellt 25 Mana her" })
+        description = { "Stellt 35 Mana her" })
 public class ItemManaPotion extends Item
 {
     /**
@@ -28,7 +28,7 @@ public class ItemManaPotion extends Item
         if (mana >= 100)
             return false;
 
-        TextAdventure.getInstance().getPlayer().setMana(mana >= 75 ? 100 : mana + 25);
+        TextAdventure.getInstance().getPlayer().setMana(mana >= 65 ? 100 : mana + 35);
 
         return true;
     }

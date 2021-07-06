@@ -11,7 +11,7 @@ import de.nosswald.game.item.Item;
         name = "Langschwert",
         iconPath = "assets/items/long_sword.png",
         color = 0x545a66,
-        description = { "+5 Angriffsschaden" })
+        description = { "+10 Angriffsschaden" })
 public class ItemLongSword extends Item
 {
     /**
@@ -32,6 +32,6 @@ public class ItemLongSword extends Item
     @Override
     public int getBonusAttackDamage()
     {
-        return 5;
+        return 10;
     }
 }

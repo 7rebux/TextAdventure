@@ -1,4 +1,5 @@
 §levelName=Der Affe
 §characterName=Erzähler
+§reward=ManaPotion
 [DIALOG]Du befindest dich nun im Dschungel. Vor dir befindet sich ein Affe.//Klicke auf [Weiter] um dich dem Kampf zu stellen.
 [ANSWER]Weiter:left-2

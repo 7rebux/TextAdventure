@@ -22,7 +22,7 @@ public class EnemyMonkey extends EntityEnemy
     @Override
     public void onDeath()
     {
-        if (Math.random() <= 0.1D)
+        if (Math.random() <= 0.5D)
             TextAdventure.getInstance().getPlayer().addItemToInventory(new ItemLongSword());
     }
 }
