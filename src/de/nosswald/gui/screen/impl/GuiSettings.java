@@ -41,8 +41,9 @@ public class GuiSettings extends GuiScreen
         this.registerElement(saveButton);
 
         // testing
-        this.registerElement(new ElementTextBox(new String[]{ "line1", "line2", "line3" }, 20, 20, 300, 60));
+        this.registerElement(new ElementTextBox(new String[]{ "Example TextBox", "line1", "line2" }, 20, 20, 300, 60));
         this.registerElement(new ElementLabel("Example Label", 20, 120));
+        this.registerElement(new ElementButton("Example Button", 20, 140, 100, 30));
     }
 
     /**
