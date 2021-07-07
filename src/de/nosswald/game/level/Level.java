@@ -12,11 +12,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.*;
 
@@ -57,7 +59,7 @@ public class Level
     {
         try
         {
-            Scanner scanner = new Scanner(path.toFile());
+            Scanner scanner = new Scanner(path.toFile(), StandardCharsets.UTF_8);
 
             while (scanner.hasNextLine())
             {
@@ -97,7 +99,7 @@ public class Level
                 }
             }
         }
-        catch (FileNotFoundException | IllegalAccessException ignored) { }
+        catch (IOException | IllegalAccessException ignored) { }
 
         fileName = path.getFileName().toString();
 
